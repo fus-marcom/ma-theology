@@ -260,11 +260,12 @@ main {
           <a href="#home" class="brand-logo"><img src="img/logoTxt.png"/></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="icon-navicon"></i></a>
           <ul class="right hide-on-med-and-down">
-            <li><a class="slow-nav" href="#why-franciscan">Why Franciscan?</a></li>
-            <li><a class="slow-nav" href="#life">Your Life</a></li>
-            <li><a class="slow-nav" href="#adventure">Your Adventure</a></li>
-            <li><a class="slow-nav" href="#success">Your Success</a></li>
-            <li><a class="slow-nav" href="#next-step">Your Next Step</a></li>
+            <li><a class="slow-nav" href="#quote-banner">Why Franciscan?</a></li>
+            <li><a class="slow-nav" href="#pick-your-program">Pick Your Program</a></li>
+            <li><a class="slow-nav" href="#testimonials">Accolades</a></li>
+            <li class="apply-btn">
+              <a onclick="goog_report_conversion ('https://myfranciscan.franciscan.edu/ICS/Admissions/Admissions.jnz?portlet=Get_Connected!_-_Undergraduate_Applications')" href="https://myfranciscan.franciscan.edu/ICS/Admissions/Admissions.jnz?portlet=Get_Connected!_-_Undergraduate_Applications">Apply Now</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -276,11 +277,9 @@ main {
         <img src="img/side-nav-logo.jpg">
       </a>
     </li>
-    <li><a class="slow-nav" href="#why-franciscan">Why Franciscan?</a></li>
-    <li><a class="slow-nav" href="#life">Your Life</a></li>
-    <li><a class="slow-nav" href="#adventure">Your Adventure</a></li>
-    <li><a class="slow-nav" href="#success">Your Success</a></li>
-    <li><a class="slow-nav" href="#next-step">Your Next Step</a></li>
+    <li><a class="slow-nav" href="#quote-banner">Why Franciscan?</a></li>
+    <li><a class="slow-nav" href="#pick-your-program">Pick Your Program</a></li>
+    <li><a class="slow-nav" href="#testimonials">Accolades</a></li>
     <li>
       <a onclick="goog_report_conversion ('https://myfranciscan.franciscan.edu/ICS/Admissions/Admissions.jnz?portlet=Get_Connected!_-_Undergraduate_Applications')" href="https://myfranciscan.franciscan.edu/ICS/Admissions/Admissions.jnz?portlet=Get_Connected!_-_Undergraduate_Applications">Apply Now</a>
     </li>
@@ -310,7 +309,10 @@ main {
           </p>
         </div>
         <div class="row center">
-          <a href="#why-franciscan" class="btn-large waves-effect waves-light btn-inverse slow-nav">Why Franciscan?</a>
+          <a href="#quote-banner" class="btn-large waves-effect waves-light btn-inverse slow-nav">Why Franciscan?</a>
+        </div>
+        <div class="row center">
+          <a href="#pick-your-program" class="btn-large waves-effect waves-light btn-inverse slow-nav">Find Your Program</a>
         </div>
       </div>
     </div>
@@ -443,7 +445,7 @@ main {
                   <span class="card-title-text theology activator">MA Catechetics & Evangelization</span>
                 </span>
                 <p>
-                  A fully online program that trains Catholic who want to serve the Church and minister to others in the New Evangelization! Appropriate for directors of RCIA, parish faith formation, youth ministry, and religious education.
+                  A fully online program that trains Catholics who want to serve the Church and minister to others in the New Evangelization! Appropriate for directors of RCIA, parish faith formation, youth ministry, and religious education.
                 </p>
 
               </div>
@@ -565,7 +567,7 @@ main {
         <div class="row center">
           <h5 class="center header light white-text">Need help deciding?</h5>
           <!-- This needs to open a the Find your program modal.  -->
-          <a href="#program-modal" class="modal-trigger btn-large waves-effect waves-light btn-inverse">Find Your Program</a>
+          <a href="#program-modal" class="modal-trigger btn-large waves-effect waves-light btn-inverse">Let us help</a>
         </div>
       </div>
     </div>
@@ -574,7 +576,7 @@ main {
     <div class="section valign-wrapper black-text" id="testimonials" name="#testimonials">
       <div class="valign container">
         <div id="success-row" class="row">
-          <h3 class="center header light">Testimonials</h3>
+          <h3 class="center header light">What Bishops Say About Us</h3>
         </div>
         <div class="row">
           <p class="flow-text">
@@ -608,8 +610,32 @@ main {
             <p>
               <span class="bold">Most Rev. Arthur Seratelli</span>, <span class="italic">Bishop of Paterson</span>
             </p>
-          </div>
 
+            <span class="hr"></span>
+            <p class="flow-text">
+              “As a bishop I sought the help in carrying out my episcopal responsibilities of graduates from Franciscan University and I must say I was never disappointed, except that frequently I couldn't obtain them because other bishops got to the graduates before I did.”
+            </p>
+            <p>
+              <span class="bold">Raymond Cardinal Burke</span>, <span class="italic">former Archbishop of St. Louis</span>
+            </p>
+
+            <span class="hr"></span>
+            <p class="flow-text">
+              “As a bishop and a Church leader I am grateful for your graduates who provide such faithful service to the Church in so many areas of ministry.”
+            </p>
+            <p>
+              <span class="bold">Most Rev. José Gomez</span>, <span class="italic">Archbishop of Los Angeles, Baccalaureate 2013</span>
+            </p>
+
+            <span class="hr"></span>
+            <p class="flow-text">
+              “Franciscan University is a center of spirituality, catechesis, vocations, evangelization, community—a truly passionately Catholic university. … Everywhere you go in the country you meet graduates who are running RCIA programs, teaching in Catholic high schools, are working in Catholic parishes, running programs of evangelization, it is just such a blessing.”
+            </p>
+            <p>
+              <span class="bold">Seán Cardinal O'Malley</span>, <span class="italic">Archbishop of Boston, Baccalaureate 2016</span>
+            </p>
+
+          </div>
 
         </div>
         <row class="row center">
@@ -621,7 +647,7 @@ main {
     </div>
 
     <!-- Next Step Section -->
-    <div class="section valign-wrapper" id="next-step" name="#next-step">
+    <!-- <div class="section valign-wrapper" id="next-step" name="#next-step">
       <div class="valign container">
         <div class="row">
           <h3 class="center header light">Your Next Step</h3>
@@ -660,7 +686,7 @@ main {
 
         </div>
       </div>
-    </div>
+    </div> -->
 
 
     <div id="program-modal" class="modal bottom-sheet">

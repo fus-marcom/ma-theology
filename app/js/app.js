@@ -176,7 +176,7 @@ $(function() {
   //Smooth in page navigation
   function scrollToAnchor(name){
       var aTag = $("div[name='"+ name +"']");
-      $('html,body').animate({scrollTop: aTag.offset().top}, 5000, 'linear');
+      $('html,body').animate({scrollTop: aTag.offset().top}, 'slow');
   }
 
   $(".slow-nav").click(function() {
