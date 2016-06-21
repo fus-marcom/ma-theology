@@ -1,0 +1,659 @@
+@import 'color';
+@import 'variables';
+@import 'global';
+@import 'checkboxes';
+@import 'forms/forms';
+
+// Colors
+$primary-400: #7C0000;
+$primary-500: #510d0a;
+$primary-600: #3E0000;
+
+$secondary-A100: #66FFFF;
+$secondary-A200: #1AFFFF;
+$secondary-A400: #cec3c1;
+
+$accent-yellow: #f0cf65;
+$accent-blue: #93b5c6;
+$accent-silver: #cec3c1;
+$accent-salmon: #d7816a;
+
+$fus-green: #21412a;
+$fus-yellow: #ffc658;
+$fus-light-red: #af7871;
+$fus-red: #8a391b;
+$fus-light-green: #80967a;
+$fus-light-blue: #8e9fbc;
+$fus-dark-blue: #1f2a44;
+$fus-green: #21412a;
+$fus-gold: #998643;
+
+$black-87: rgba(0, 0, 0, .87);
+
+.black-text {
+  color: rgba(0, 0, 0, .87) !important;
+
+}
+
+.italic {
+  font-style: italic;
+}
+
+html {
+  color: #fff;
+}
+
+body {
+  background-color: #fafafa;
+  background-image: url(../img/fleur2.svg);
+  background-size: 20%;
+  background-attachment: fixed;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  padding: 0 10px;
+  transition: top 0.2s ease-in-out;
+
+  @media screen and (min-width: 800px) {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .button-collapse {
+    color: #fff;
+
+    i {
+      line-height: 73px;
+      font-size: 3.5rem;
+
+      @media only screen and (min-width: 601px) {
+        line-height: 77px !important;
+      }
+    }
+  }
+
+  ul a {
+    color: #fff;
+    font-weight: 300;
+  }
+
+  .brand-logo {
+    img {
+      height: 45px;
+      margin-top: 5px;
+    }
+  }
+}
+
+.side-nav {
+  a {
+    font-weight: 300;
+  }
+
+  .logo {
+    height: 90px;
+
+    a {
+      padding: 10px 10px 0px 10px;
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//headroom.js styles
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+body {
+  font-size: 16px;
+  display: flex;
+  min-height: 100vh;
+
+  //display: flex
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  margin-top: -56px;
+  //background-color: #fff;
+
+  @media only screen and (min-width: 601px) {
+    margin-top: -64px;
+  }
+}
+
+.section {
+  padding: 100px 0;
+  @media screen and (max-height: 578px) {
+    padding: 25px 0;
+  }
+}
+
+@mixin section-backgrounds($img, $img-med, $img-lg, $img-x-lg) {
+  background: {
+    color: $fus-green;
+    image: url($img);
+    attachment: scroll;
+
+    //size: auto 100vh
+    size: cover;
+    position: top center;
+  };
+
+  @media only screen and (min-width: 501px) {
+    background: {
+      image: url($img-med);
+    };
+  }
+
+  @media only screen and (min-width: 601px) {
+    background: {
+      image: url($img-lg);
+      attachment: fixed;
+    };
+  }
+
+  @media only screen and (min-width: 1200px) {
+    background: {
+      image: url($img-x-lg);
+      attachment: fixed;
+    };
+  }
+}
+
+// #home {
+//   @include section-backgrounds("../img/top-img-500w.jpg", "../img/top-img-650w.jpg", "../img/top-img-1300w.jpg", "../img/test.png");
+//   min-height: 100vh;
+//   //padding-top: 50px;
+// }
+
+#life {
+  @include section-backgrounds("../img/life2-500w.jpg", "../img/life2-650w.jpg", "../img/life2-1300w.jpg", "../img/life2-2000w.jpg");
+}
+
+#faith {
+  @include section-backgrounds("../img/faith2-500w.jpg", "../img/faith2-650w.jpg", "../img/faith2-1300w.jpg", "../img/faith2-2000w.jpg");
+}
+
+#athletics {
+  @include section-backgrounds("../img/athletics-500w.jpg", "../img/athletics-650w.jpg", "../img/athletics-1300w.jpg", "../img/athletics-2000w.jpg");
+}
+
+#households {
+  @include section-backgrounds("../img/households1-500w.jpg", "../img/households1-650w.jpg", "../img/households1-1300w.jpg", "../img/households1-2000w.jpg");
+}
+
+//#education
+// //+section-backgrounds('https://unsplash.it/600/600?image=1067', 'https://unsplash.it/3000/1000?image=1067')
+//  background: #f4bf61
+
+//#adventure
+//  +section-backgrounds('https://unsplash.it/600/300?image=1025', 'https://unsplash.it/3000/2000?image=1025')
+
+// #success-row
+//   +section-backgrounds('../img/Success-1.jpg', 'https://unsplash.it/3000/1000?image=859')
+
+// #next-step
+//   +section-backgrounds('../img/Life-1.jpg', 'https://unsplash.it/3000/1000?image=0')
+
+#home {
+   min-height: 100vh;
+   background-image: url('../img/holy-door-open.jpg');
+     background-attachment: fixed;
+     background-position: center center;
+     background-size: cover;
+    //  -webkit-transform: rotate(270deg);
+    //      -moz-transform: rotate(270deg);
+    //      -ms-transform: rotate(270deg);
+    //      -o-transform: rotate(270deg);
+    //      transform: rotate(270deg);
+
+  .btn-large {
+    font-size: 20px;
+  }
+
+  @media screen and (max-height: 578px) {
+    padding-top: 45px;
+
+    .container p.flow-text {
+      display: none;
+    }
+  }
+
+  .parallax {
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .valign.container {
+    z-index: 2;
+  }
+
+  .flow-text {
+    font-size: 110%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    padding: 16px;
+    max-width: 465px;
+    margin: 0 auto;
+    line-height: 1.3
+  }
+
+  // @media screen and (min-width: 800px) {
+  //   background: none;
+  // }
+}
+
+// #home:before {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   z-index: -1;
+//
+//   display: block;
+//   background-image: url('../img/ctk-consecration.jpg');
+//   background-attachment: fixed;
+//   background-position: center;
+//   background-size: cover;
+//   width: 100%;
+//   height: 100vh;
+//   top: 0;
+//   -webkit-filter: rotate(1);
+//    filter: rotate(1);
+//    -webkit-transform: rotate(270deg);
+//     -moz-transform: rotate(270deg);
+//     -ms-transform: rotate(270deg);
+//     -o-transform: rotate(270deg);
+//     transform: rotate(270deg);
+// }
+
+.short-screen {
+  display: none;
+  @media screen and (max-height: 578px) {
+    display: block;
+  }
+}
+
+#bgvid {
+  min-width: 100%;
+  min-height: 100%;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
+
+#down-icon {
+  position: relative;
+  margin: (-90px) auto 0;
+  display: block;
+  width: 90px;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #fff;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+#quote-banner {
+  //background-color: $primary-500;
+  padding: 50px 0px;
+
+  @media screen and (max-height: 578px) {
+    padding: 15px 0px;
+  }
+}
+
+#why-franciscan {
+  background-color: $primary-500;
+  padding: 25px 0;
+}
+
+.card-video {
+  -webkit-transition: box-shadow .25s;
+  transition: box-shadow .25s;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+  margin-bottom: 50px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.activator {
+  cursor: pointer;
+}
+
+// Using flexbox to make cards the same height
+// #pick-your-program {
+//
+//   .row{
+//     display: flex;
+//     flex-wrap: wrap;;
+//     justify-content: center;
+//
+//     .col {
+//       display: flex;
+//     }
+//   }
+// }
+
+
+
+// .slider {
+//   height: 10px;
+//   min-height: 100vh;
+//
+//   .indicators {
+//     z-index: 2;
+//     margin-bottom: 9px;
+//
+//     .indicator-item {
+//       opacity: 0.75;
+//       height: 25px;
+//       width: 25px;
+//       background-color: $fus-green;
+//       margin-bottom: 10px;
+//     }
+//
+//     .indicator-item.active {
+//       background-color: $fus-yellow;
+//       opacity: 1;
+//     }
+//   }
+//
+//   .flow-text {
+//     width: 110%;
+//     margin-left: -5%;
+//   }
+// }
+
+// .slider-text {
+//   background-color: rgba(0, 0, 0, 0.6);
+//   border-radius: 2px;
+//
+//   // div.s2
+//   //   margin-top: calc(50%)
+//   .col {
+//     padding: 0px;
+//   }
+// }
+//
+// .slider-btn {
+//   font-size: 45px;
+//   opacity: 0.75;
+//
+//   &:hover {
+//     opacity: 1;
+//     cursor: pointer;
+//   }
+// }
+
+.txt-shadow {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.39);
+}
+
+.btn-inverse {
+  background-color: transparent;
+  border: solid 1px #fff;
+  color: #fff;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #fff;
+    color: $black-87;
+  }
+}
+
+#pick-your-program {
+  background-image: url(../img/fleur2.svg);
+  background-size: 20%;
+  background-attachment: fixed;
+
+  .card {
+    .card-title {
+      line-height: 1;
+    }
+
+    .card-content {
+      padding: 24px 16px 16px 16px;
+
+      p {
+        margin-top: 16px;
+      }
+    }
+
+    .card-action {
+      border-top: none;
+      padding: 8px 16px 16px 16px;
+
+      a:not(.btn):not(.btn-large):not(.btn-floating) {
+        color: $accent-blue;
+        margin-right: 20px;
+        transition: color .3s ease;
+        text-transform: uppercase;
+
+        &:hover {
+          color: lighten($accent-blue, 10%);
+        }
+      }
+    }
+
+    a {
+      color: $accent-yellow;
+    }
+  }
+
+  .card-reveal {
+    .card-action {
+      padding-left: 0;
+      padding-bottom: 0;
+      position: absolute;
+      bottom: 16px;
+    }
+  }
+
+  .collapsible {
+
+    .collapsible-header {
+      min-height: 0;
+      line-height: 1.2;
+      padding: 16px;
+    }
+
+    .collapsible-body {
+      background-color: #fff;
+
+      p {
+        padding: 24px 16px 16px 16px;
+      }
+    }
+
+    .card-action {
+      border-top: none;
+      padding: 8px 16px 16px 16px;
+      text-transform: uppercase;
+
+      a {
+        color: $accent-blue;
+
+        &:hover {
+          color: lighten($accent-blue, 10%);
+        }
+      }
+    }
+  }
+}
+
+#program-banner {
+  background-color: $primary-500;
+  padding: 50px 0px;
+
+  @media screen and (max-height: 578px) {
+    padding: 15px 0px;
+  }
+
+  h5 {
+    margin-bottom: 16px;
+  }
+
+}
+
+#testimonials {
+
+  .expansion-container.hide {
+    display: none;
+    transform: translateY(-100%);
+  }
+
+  .expansion-container.show {
+    display: block;
+    transform: translateY(0);
+  }
+
+  .btn-large {
+    background-color: $primary-500;
+    margin: 0 auto;
+    max-width: 160px;
+    display: block;
+  }
+
+}
+
+
+
+// #adventure {
+//   .card-content {
+//     @media screen and (min-width: 600px) {
+//       min-height: 330px;
+//     }
+//
+//     @media screen and (min-width: 1200px) {
+//       min-height: 299px;
+//     }
+//
+//     @media screen and (min-width: 1563px) {
+//       min-height: 225px;
+//     }
+//   }
+// }
+
+#success {
+  p {
+    padding: 0 20px;
+  }
+}
+
+.hr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+#next-step {
+  background-color: $primary-500;
+
+  .btn-large {
+    width: 200px;
+    background: transparent;
+    border: solid #fff 1px;
+    transition: all 0.8s;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  p {
+    padding: 15px 15px 0px 18px;
+  }
+
+  #social-icons {
+    margin-top: 50px;
+
+    a {
+      i {
+        color: #fff;
+        font-size: 25px;
+      }
+    }
+
+    .social-icon {
+      width: 34px;
+      margin-top: -3px;
+
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.modal {
+  color: rgba(0,0,0,0.87);
+}
+
+#program-modal {
+  .btn-large {
+    background-color: $fus-dark-blue;
+  }
+
+  .container.hide {
+    display: none;
+  }
+
+  .container.show {
+    display: block;
+  }
+}
+
+footer.page-footer {
+  background-color: $primary-600;
+  margin-top: 0px;
+  padding-top: 0px;
+
+  .row {
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+}
+
+.footer-copyright {
+  a {
+    margin-right: 10px;
+  }
+}
