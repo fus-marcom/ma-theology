@@ -50,6 +50,13 @@ body {
   background-attachment: fixed;
 }
 
+@media only screen and (min-width: 601px) {
+  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 76px;
+    line-height: 76px;
+  }
+}
+
 nav {
   background-color: $primary-500;
   // border: none;
@@ -82,7 +89,7 @@ nav {
 
   .brand-logo {
     img {
-      height: 45px;
+      height: 68px;
       margin-top: 5px;
     }
   }

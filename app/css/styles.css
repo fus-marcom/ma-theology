@@ -3413,6 +3413,11 @@ body {
   background-size: 20%;
   background-attachment: fixed; }
 
+@media only screen and (min-width: 601px) {
+  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 76px;
+    line-height: 76px; } }
+
 nav {
   background-color: #510d0a;
   color: #fff;
@@ -3430,7 +3435,7 @@ nav {
     color: #fff;
     font-weight: 300; }
   nav .brand-logo img {
-    height: 45px;
+    height: 68px;
     margin-top: 5px; }
   nav .apply-btn a {
     border: 1px solid #fff;
@@ -3650,49 +3655,52 @@ main {
     background-color: #fff;
     color: rgba(0, 0, 0, 0.87); }
 
-#pick-your-program {
-  background-image: url(../img/fleur2.svg);
-  background-size: 20%;
-  background-attachment: fixed; }
-  #pick-your-program .card .card-title {
-    line-height: 1; }
-  #pick-your-program .card .card-content {
-    padding: 24px 16px 16px 16px; }
-    #pick-your-program .card .card-content p {
-      margin-top: 16px; }
-  #pick-your-program .card .card-action {
-    border-top: none;
-    padding: 8px 16px 16px 16px; }
-    #pick-your-program .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
-      color: #93b5c6;
-      margin-right: 20px;
-      transition: color .3s ease;
-      text-transform: uppercase; }
-      #pick-your-program .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
-        color: #b4ccd8; }
-  #pick-your-program .card a {
-    color: #f0cf65; }
-  #pick-your-program .card-reveal .card-action {
-    padding-left: 0;
-    padding-bottom: 0;
-    position: absolute;
-    bottom: 16px; }
-  #pick-your-program .collapsible .collapsible-header {
-    min-height: 0;
-    line-height: 1.2;
-    padding: 16px; }
-  #pick-your-program .collapsible .collapsible-body {
-    background-color: #fff; }
-    #pick-your-program .collapsible .collapsible-body p {
-      padding: 24px 16px 16px 16px; }
-  #pick-your-program .collapsible .card-action {
-    border-top: none;
-    padding: 8px 16px 16px 16px;
+#pick-your-program .card .card-title {
+  line-height: 1; }
+
+#pick-your-program .card .card-content {
+  padding: 24px 16px 16px 16px; }
+  #pick-your-program .card .card-content p {
+    margin-top: 16px; }
+
+#pick-your-program .card .card-action {
+  border-top: none;
+  padding: 8px 16px 16px 16px; }
+  #pick-your-program .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+    color: #93b5c6;
+    margin-right: 20px;
+    transition: color .3s ease;
     text-transform: uppercase; }
-    #pick-your-program .collapsible .card-action a {
-      color: #93b5c6; }
-      #pick-your-program .collapsible .card-action a:hover {
-        color: #b4ccd8; }
+    #pick-your-program .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
+      color: #b4ccd8; }
+
+#pick-your-program .card a {
+  color: #f0cf65; }
+
+#pick-your-program .card-reveal .card-action {
+  padding-left: 0;
+  padding-bottom: 0;
+  position: absolute;
+  bottom: 16px; }
+
+#pick-your-program .collapsible .collapsible-header {
+  min-height: 0;
+  line-height: 1.2;
+  padding: 16px; }
+
+#pick-your-program .collapsible .collapsible-body {
+  background-color: #fff; }
+  #pick-your-program .collapsible .collapsible-body p {
+    padding: 24px 16px 16px 16px; }
+
+#pick-your-program .collapsible .card-action {
+  border-top: none;
+  padding: 8px 16px 16px 16px;
+  text-transform: uppercase; }
+  #pick-your-program .collapsible .card-action a {
+    color: #93b5c6; }
+    #pick-your-program .collapsible .card-action a:hover {
+      color: #b4ccd8; }
 
 #program-banner {
   background-color: #510d0a;
