@@ -3435,8 +3435,11 @@ nav {
     color: #fff;
     font-weight: 300; }
   nav .brand-logo img {
-    height: 68px;
+    height: 54px;
     margin-top: 5px; }
+    @media only screen and (min-width: 601px) {
+      nav .brand-logo img {
+        height: 68px; } }
   nav .apply-btn a {
     border: 1px solid #fff;
     line-height: 3;
@@ -3737,31 +3740,11 @@ main {
 .bold {
   font-weight: 500; }
 
-#next-step {
-  background-color: #510d0a; }
-  #next-step .btn-large {
-    width: 200px;
-    background: transparent;
-    border: solid #fff 1px;
-    transition: all 0.8s; }
-    #next-step .btn-large:hover {
-      background-color: #fff;
-      color: #000; }
-  #next-step p {
-    padding: 15px 15px 0px 18px; }
-  #next-step #social-icons {
-    margin-top: 50px; }
-    #next-step #social-icons a i {
-      color: #fff;
-      font-size: 25px; }
-    #next-step #social-icons .social-icon {
-      width: 34px;
-      margin-top: -3px; }
-      #next-step #social-icons .social-icon path {
-        fill: #fff; }
-
 .modal {
   color: rgba(0, 0, 0, 0.87); }
+
+.modal.bottom-sheet {
+  max-height: 75%; }
 
 #program-modal .btn-large {
   background-color: #1f2a44; }

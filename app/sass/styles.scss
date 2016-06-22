@@ -89,8 +89,13 @@ nav {
 
   .brand-logo {
     img {
-      height: 68px;
+      height: 54px;
       margin-top: 5px;
+
+      @media only screen and (min-width: 601px) {
+        height: 68px;
+      }
+
     }
   }
 
@@ -598,48 +603,52 @@ main {
   font-weight: 500;
 }
 
-#next-step {
-  background-color: $primary-500;
-
-  .btn-large {
-    width: 200px;
-    background: transparent;
-    border: solid #fff 1px;
-    transition: all 0.8s;
-
-    &:hover {
-      background-color: #fff;
-      color: #000;
-    }
-  }
-
-  p {
-    padding: 15px 15px 0px 18px;
-  }
-
-  #social-icons {
-    margin-top: 50px;
-
-    a {
-      i {
-        color: #fff;
-        font-size: 25px;
-      }
-    }
-
-    .social-icon {
-      width: 34px;
-      margin-top: -3px;
-
-      path {
-        fill: #fff;
-      }
-    }
-  }
-}
+// #next-step {
+//   background-color: $primary-500;
+//
+//   .btn-large {
+//     width: 200px;
+//     background: transparent;
+//     border: solid #fff 1px;
+//     transition: all 0.8s;
+//
+//     &:hover {
+//       background-color: #fff;
+//       color: #000;
+//     }
+//   }
+//
+//   p {
+//     padding: 15px 15px 0px 18px;
+//   }
+//
+//   #social-icons {
+//     margin-top: 50px;
+//
+//     a {
+//       i {
+//         color: #fff;
+//         font-size: 25px;
+//       }
+//     }
+//
+//     .social-icon {
+//       width: 34px;
+//       margin-top: -3px;
+//
+//       path {
+//         fill: #fff;
+//       }
+//     }
+//   }
+// }
 
 .modal {
   color: rgba(0,0,0,0.87);
+}
+
+.modal.bottom-sheet {
+  max-height: 75%;
 }
 
 #program-modal {
