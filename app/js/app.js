@@ -29,12 +29,16 @@ $(function() {
   var questionArr,
     resultsTemplate = "",
     count = 0;
+
+    //hide results page try again button-collapse
+    $('#results-try-again, .results-row, #results-btn-row').hide();
    $('.modal-trigger').leanModal();
 
    $('#program-modal .container').addClass('hide');
    $('.program-question-container').removeClass('hide').addClass('show');
 
-   $('#find-program-btn').click(function(){
+   $('#find-program-btn, #fail-try-again').click(function(){
+     $('#program-modal .container').addClass('hide');
      resultsTemplate = "";
      // Do the stuff with the questions to get the answer
 
@@ -94,8 +98,14 @@ $(function() {
      //
      // End Questions Code
      //
-
-
+     console.log(count);
+     if  (count > 0) {
+       //Render results
+       $('.results-row, #results-btn-row').show();
+       $('.results-container h4').text("You're a great fit for...");
+       $('#results-here').html(resultsTemplate);
+       $('#results-try-again').show();
+     }
      //Render results
      $('#results-here').html(resultsTemplate);
 
@@ -235,8 +245,9 @@ $(function() {
 
    });
 
-   $('.try-again').click(function(){
+   $('#results-try-again').click(function(){
      count = 0;
+     $('#results-try-again, .results-row, #results-btn-row').hide();
      $('.program-question-container').removeClass('hide').addClass('show');
      $(this).parents('.container').removeClass('show').addClass('hide');
      $('#program-modal input[type="checkbox"]').prop('checked', false);

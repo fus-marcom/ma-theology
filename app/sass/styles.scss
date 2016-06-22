@@ -483,6 +483,7 @@ main {
 
         &:hover {
           color: lighten($accent-blue, 10%);
+          cursor: pointer;
         }
       }
     }
@@ -524,6 +525,8 @@ main {
 
       a {
         color: $accent-blue;
+        padding-right: 8px;
+        cursor: pointer;
 
         &:hover {
           color: lighten($accent-blue, 10%);
