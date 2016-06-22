@@ -26,18 +26,87 @@ $(function() {
   });
 
   // Modal
+  var questionArr,
+    resultsTemplate = "",
+    count = 0;
    $('.modal-trigger').leanModal();
 
    $('#program-modal .container').addClass('hide');
    $('.program-question-container').removeClass('hide').addClass('show');
 
    $('#find-program-btn').click(function(){
-     $('.program-question-container').removeClass('show').addClass('hide');
+     resultsTemplate = "";
      // Do the stuff with the questions to get the answer
+
+     //Question 1 (MA Theology)
+     if ($('#question-1').prop('checked') === true) {
+       resultsTemplate = '<h5 class="program-name">MA Theology</h5>';
+       count++;
+     }
+
+     //Question 2 (MA Catechetics & Evangelization)
+     if ($('#question-2').prop('checked') === true) {
+       if(resultsTemplate === "") {
+         resultsTemplate = '<h5 class="program-name">MA Catechetics & Evangelization</h5>';
+         count++;
+       } else {
+         resultsTemplate = resultsTemplate + '<h5 class="program-name">or MA Catechetics & Evangelization</h5>';
+         count++;
+       }
+     }
+
+     //Question 3 (MA Theology: Catechetics Specialization)
+     if ($('#question-3').prop('checked') === true) {
+       if(resultsTemplate === "") {
+         resultsTemplate = '<h5 class="program-name">MA Theology: Catechetics Specialization</h5>';
+         count++;
+       } else {
+         resultsTemplate = resultsTemplate + '<h5 class="program-name">or MA Theology: Catechetics Specialization</h5>';
+         count++;
+       }
+     }
+
+     //Question 4 (MA Theology: Canon Law First Cycle)
+     if ($('#question-4').prop('checked') === true) {
+       if(resultsTemplate === "") {
+         resultsTemplate = '<h5 class="program-name">MA Theology: Canon Law First Cycle</h5>';
+         count++;
+       } else {
+         resultsTemplate = resultsTemplate + '<h5 class="program-name">or MA Theology: Canon Law First Cycle</h5>';
+         count++;
+       }
+     }
+
+     //Question 5 (MA Theology: Research Intensive Track)
+     if ($('#question-5').prop('checked') === true) {
+       if(resultsTemplate === "") {
+         resultsTemplate = '<h5 class="program-name">MA Theology: Research Intensive Track</h5>';
+
+       } else if(count === 4){
+         // If all questions were checked
+         resultsTemplate = '<h5 class="program-name">any of our programs!</h5>';
+
+       } else {
+         resultsTemplate = resultsTemplate + '<h5 class="program-name">or MA Theology: Research Intensive Track</h5>';
+       }
+     }
+
+     //
+     // End Questions Code
+     //
+
+
+     //Render results
+     $('#results-here').html(resultsTemplate);
+
+
+     $('.program-question-container').removeClass('show').addClass('hide');
      $('.results-container').removeClass('hide').addClass('show');
 
    });
 
+
+   // Submit btn on results/more info modal view
    $('#submit-info').click(function(){
      //Get data from form and send it to google sheet
 
@@ -167,6 +236,7 @@ $(function() {
    });
 
    $('.try-again').click(function(){
+     count = 0;
      $('.program-question-container').removeClass('hide').addClass('show');
      $(this).parents('.container').removeClass('show').addClass('hide');
      $('#program-modal input[type="checkbox"]').prop('checked', false);
