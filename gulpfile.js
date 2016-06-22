@@ -8,6 +8,9 @@ var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
 var inject = require('gulp-inject'); //Start by adding the plugin to your gulpfile
 var htmlmin = require('gulp-htmlmin');
+var del = require('del');
+var runSequence = require('run-sequence');
+
 
 
 gulp.task('dist', function() {
@@ -61,6 +64,15 @@ gulp.task('imgmin', function() {
 			svgoPlugins: [{removeViewBox: false}]
 		}))
 		.pipe(gulp.dest('dist/img'));
+});
+
+gulp.task('fonts', function() {
+  return gulp.src('app/fonts/**/*')
+  .pipe(gulp.dest('dist/fonts'))
+});
+
+gulp.task('clean:dist', function() {
+  return del.sync('dist');
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function (){
