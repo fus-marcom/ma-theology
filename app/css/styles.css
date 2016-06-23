@@ -3422,7 +3422,9 @@ nav {
   background-color: #510d0a;
   color: #fff;
   padding: 0 10px;
-  transition: top 0.2s ease-in-out; }
+  transition: top 0.2s ease-in-out;
+  height: 61px;
+  line-height: 61px; }
   nav .button-collapse {
     color: #fff; }
     nav .button-collapse i {
