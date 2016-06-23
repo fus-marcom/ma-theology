@@ -1445,7 +1445,11 @@ body {
   background-color: #fafafa;
   background-image: url(../img/fleur2.svg);
   background-size: 20%;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  font-size: 16px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
 
 @media only screen and (min-width: 601px) {
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
@@ -1457,8 +1461,12 @@ nav {
   color: #fff;
   padding: 0 10px;
   transition: top 0.2s ease-in-out;
-  height: 76px;
-  line-height: 79px; }
+  height: 64px;
+  line-height: 64px; }
+  @media only screen and (min-width: 601px) {
+    nav {
+      height: 76px;
+      line-height: 76px; } }
   nav .button-collapse {
     color: #fff; }
     nav .button-collapse i {
@@ -1506,12 +1514,6 @@ nav {
 .headroom--unpinned {
   transform: translateY(-100%); }
 
-body {
-  font-size: 16px;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column; }
-
 main {
   flex: 1 0 auto;
   margin-top: -56px; }
@@ -1527,13 +1529,14 @@ main {
 
 #home {
   min-height: 100vh;
+  padding-top: 100px;
   background-color: rgba(0, 0, 0, 0.35); }
   #home .btn-large {
     font-size: 20px;
     text-shadow: none; }
   @media screen and (max-height: 578px) {
     #home {
-      padding-top: 45px; }
+      padding-top: 76px; }
       #home .container p.flow-text {
         display: none; } }
   #home .parallax {
@@ -1552,13 +1555,22 @@ main {
   right: 0;
   z-index: -1;
   display: block;
-  background-image: url("../img/holy-door-open.jpg");
+  background-image: url("../img/holy-door-500w-min.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   top: 0; }
+  @media only screen and (min-width: 501px) {
+    #home:before {
+      background-image: url("../img/holy-door-650w-min.jpg"); } }
+  @media only screen and (min-width: 601px) {
+    #home:before {
+      background-image: url("../img/holy-door-1400w-min.jpg"); } }
+  @media only screen and (max-height: 410px) {
+    #home:before {
+      min-height: 200vh; } }
 
 .short-screen {
   display: none; }
@@ -1590,6 +1602,12 @@ main {
   @media screen and (max-height: 578px) {
     #quote-banner {
       padding: 15px 0px; } }
+  @media only screen and (max-height: 410px) {
+    #quote-banner {
+      background-color: #fafafa;
+      background-image: url(../img/fleur2.svg);
+      background-size: 20%;
+      background-attachment: fixed; } }
 
 #why-franciscan {
   background-color: #510d0a;
