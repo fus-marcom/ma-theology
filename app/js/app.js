@@ -31,7 +31,7 @@ $(function() {
    $('.program-question-container').removeClass('hide').addClass('show');
 
    $('#find-program-btn, #fail-try-again').click(function(){
-     $('#program-modal .container').addClass('hide');
+
      resultsTemplate = "";
      // Do the stuff with the questions to get the answer
 
@@ -91,23 +91,29 @@ $(function() {
      //
      // End Questions Code
      //
-     console.log(count);
-     if  (count > 0) {
+
+     if (count === 0) {
+
+     } else {
+       if  (count > 0) {
+         //Render results
+         $('.results-row, #results-btn-row').show();
+         $('.results-container h4').text("You're a great fit for...");
+         $('#results-here').html(resultsTemplate);
+         $('#results-try-again').show();
+       }
+
+        $('#program-modal .container').addClass('hide');
        //Render results
-       $('.results-row, #results-btn-row').show();
-       $('.results-container h4').text("You're a great fit for...");
        $('#results-here').html(resultsTemplate);
-       $('#results-try-again').show();
+
+
+       $('.program-question-container').removeClass('show').addClass('hide');
+       $('.results-container').removeClass('hide').addClass('show');
      }
-     //Render results
-     $('#results-here').html(resultsTemplate);
 
-
-     $('.program-question-container').removeClass('show').addClass('hide');
-     $('.results-container').removeClass('hide').addClass('show');
 
    });
-
 
    // Submit btn on results/more info modal view
    $('#submit-info').click(function(){
