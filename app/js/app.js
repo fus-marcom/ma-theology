@@ -32,7 +32,12 @@ $(function() {
 
     //hide results page try again button-collapse
     $('#results-try-again, .results-row, #results-btn-row').hide();
-   $('.modal-trigger').leanModal();
+   $('.modal-trigger').leanModal({
+     ready: function() {
+       $('#program-modal .container').addClass('hide');
+       $('.program-question-container').removeClass('hide').addClass('show');
+     }
+   });
 
    $('#program-modal .container').addClass('hide');
    $('.program-question-container').removeClass('hide').addClass('show');
@@ -251,6 +256,15 @@ $(function() {
      $('.program-question-container').removeClass('hide').addClass('show');
      $(this).parents('.container').removeClass('show').addClass('hide');
      $('#program-modal input[type="checkbox"]').prop('checked', false);
+   });
+
+
+   //Contact Buttons
+   $('.contact-modal-btn').click(function(){
+     $('#program-modal').openModal();
+     $('#program-modal .container').addClass('hide');
+     $('.results-container').removeClass('hide').addClass('show');
+
    });
 
 
