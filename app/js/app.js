@@ -25,7 +25,7 @@ $(function() {
     $('.slider').slider('next');
   });
 
-  // Modal
+  // Question Modal
   var questionArr,
     resultsTemplate = "",
     count = 0;
@@ -266,6 +266,12 @@ $(function() {
      $('.results-container').removeClass('hide').addClass('show');
 
    });
+
+
+  //  Apply Modal
+  $('.apply-btn').click(function(){
+    $('#apply-modal').openModal();
+  });
 
 
   //Smooth in page navigation

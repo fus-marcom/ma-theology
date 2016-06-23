@@ -668,6 +668,57 @@ main {
   }
 }
 
+.apply-btn {
+  cursor: pointer;
+}
+
+#apply-modal {
+  background-image: url(../img/fleur2.svg);
+  background-size: 20%;
+
+  .modal-content {
+
+    @media screen and (max-width: 600px) {
+      padding: 0;
+    }
+
+  }
+
+  .collection {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .collection-header {
+
+      h4 {
+        margin-bottom: 0;
+      }
+    }
+
+    .collection-item {
+      cursor: pointer;
+      color: $black-87;
+      //min-height: 52px;
+      //line-height: 30px;
+      padding: 16px 16px 16px 16px;
+
+      &:hover {
+        background-color: $primary-500;
+        color: #fff;
+      }
+    }
+
+    .secondary-content {
+      color: $fus-gold;
+
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
+    }
+
+  }
+}
+
 footer.page-footer {
   background-color: $primary-600;
   margin-top: 0px;

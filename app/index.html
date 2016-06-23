@@ -281,7 +281,7 @@ main {
     <li><a class="slow-nav" href="#pick-your-program">Choose Your Program</a></li>
     <li><a class="slow-nav" href="#testimonials">Accolades</a></li>
     <li>
-      <a onclick="goog_report_conversion ('https://myfranciscan.franciscan.edu/ICS/Admissions/Graduate_Applications.jnz')" href="https://myfranciscan.franciscan.edu/ICS/Admissions/Graduate_Applications.jnz">Apply Now</a>
+      <a class="apply-btn">Apply Now</a>
     </li>
     <li>
       <a onclick="goog_report_conversionR ('https://myfranciscan.franciscan.edu/ICS/Admissions/Admissions.jnz?portlet=Get_Connected!_-_Undergraduate_Inquiry')" href="https://myfranciscan.franciscan.edu/ICS/Admissions/Admissions.jnz?portlet=Get_Connected!_-_Undergraduate_Inquiry">Request Info</a>
@@ -365,12 +365,12 @@ main {
           <div class="col s12">
             <ul class="collapsible popout" data-collapsible="accordion">
               <li>
-                <div class="collapsible-header">MA Theology</div>
+                <div class="collapsible-header">MA Theology and Christian Ministry</div>
                 <div class="collapsible-body"><p>On campus or online, immerse yourself in the authentic teachings of the Church, and gain the tools to go forth and spread the Good News of Jesus Christ! Appropriate for administrators, teachers in Catholic schools, and as preparation for more advanced degrees. Complete the program in as few as two or as many as seven years. No previous theology studies necessary, and only two foundational classes are required. Online classes are asynchronous, rolling admissions and three sessions each year mean maximum flexibility!</p>
                   <div class="card-action">
                     <a href="http://www.franciscan.edu">Full Details</a>
                     <a class="contact-modal-btn">Contact</a>
-                    <a class="apply-modal-btn">Apply</a>
+                    <a class="apply-btn">Apply</a>
                   </div>
                 </div>
               </li>
@@ -424,7 +424,7 @@ main {
             <div class="card">
               <div class="card-content">
                 <span class="card-title activator">
-                  <span class="card-title-text theology activator">MA Theology</span>
+                  <span class="card-title-text theology activator">MA Theology and Christian Ministry</span>
                 </span>
                 <p>
                   On campus or online, immerse yourself in the authentic teachings of the Church, and gain the tools to go forth and spread the Good News of Jesus Christ! Appropriate for administrators, teachers in Catholic schools, and as preparation for more advanced degrees.
@@ -442,7 +442,7 @@ main {
                 <div class="card-action">
                   <a href="http://www.franciscan.edu">Full Details</a>
                   <a class="contact-modal-btn">Contact</a>
-                  <a class="apply-modal-btn">Apply</a>
+                  <a class="apply-btn">Apply</a>
 
                 </div>
               </div>
@@ -764,19 +764,35 @@ main {
         </div>
       </div>
     </div>
+
+
+    <!-- Apply Modal -->
+  <div id="apply-modal" class="modal bottom-sheet">
+    <div class="modal-content">
+      <ul class="collection with-header">
+        <li class="collection-header"><h4 class="light">Apply Now</h4></li>
+        <a href="https://myfranciscan.franciscan.edu/ICS/Admissions/Graduate_Applications.jnz?portlet=Apply_Online_2.0_2009-07-21T09-57-02-341&screen=Begin%2f%2fa340767f-234e-4b26-99f2-61e90e982d70&screenType=next%27" class="collection-item waves-effect waves-light"><div>MA Theology and Christian Ministry: On-Campus<span class="secondary-content">Apply</span></div></a>
+        <a href="https://myfranciscan.franciscan.edu/ICS/Admissions/Graduate_Applications.jnz?portlet=Apply_Online_2.0_2009-07-21T09-57-02-341&screen=Begin%2f%2f88838017-2b84-4efd-a1c0-d210428c6db9&screenType=next%27" class="collection-item waves-effect waves-light"><div>MA Theology and Christian Ministry: Online<span class="secondary-content">Apply</span></div></a>
+        <a href="https://myfranciscan.franciscan.edu/ICS/Admissions/Graduate_Applications.jnz?portlet=Apply_Online_2.0_2009-07-21T09-57-02-341&screen=Begin%2f%2fd0580276-d145-4fbe-a185-4244c196c776&screenType=next%27" class="collection-item waves-effect waves-light"><div>MA Catechetics & Evangelization<span class="secondary-content">Apply</span></div></a>
+        <a href="https://myfranciscan.franciscan.edu/ICS/Admissions/Graduate_Applications.jnz?portlet=Apply_Online_2.0_2009-07-21T09-57-02-341&screen=Begin%2f%2fa340767f-234e-4b26-99f2-61e90e982d70&screenType=next%27" class="collection-item waves-effect waves-light"><div>MA Theology: Research Intensive Track<span class="secondary-content">Apply</span></div></a>
+        <a href="https://myfranciscan.franciscan.edu/ICS/Admissions/Graduate_Applications.jnz?portlet=Apply_Online_2.0_2009-07-21T09-57-02-341&screen=Begin%2f%2fa340767f-234e-4b26-99f2-61e90e982d70&screenType=next%27" class="collection-item waves-effect waves-light"><div>MA Theology: Catechetics Specialization<span class="secondary-content">Apply</span></div></a>
+        <a href="https://myfranciscan.franciscan.edu/ICS/Admissions/Graduate_Applications.jnz?portlet=Apply_Online_2.0_2009-07-21T09-57-02-341&screen=Begin%2f%2fa340767f-234e-4b26-99f2-61e90e982d70&screenType=next%27" class="collection-item waves-effect waves-light"><div>MA Theology: Canon Law First Cycle<span class="secondary-content">Apply</span></div></a>
+      </ul>
+    </div>
+  </div>
   </main>
 
   <footer class="page-footer">
    <div class="container hide-on-large-only">
      <div class="row center">
-       <a class="white-text" target="_blank" href="https://myfranciscan.franciscan.edu/ICS/Admissions/Graduate_Applications.jnz">Apply </a>-
+       <a class="white-text apply-btn">Apply </a>-
        <a class="white-text" target="_blank" href="http://www.franciscan.edu">Franciscan.edu</a>
      </div>
    </div>
    <div class="footer-copyright">
      <div class="container">
      © <span id="copyright-date">2016</span> Franciscan University of Steubenville
-     <a class="white-text right hide-on-med-and-down apply-modal.btn">Apply</a>
+     <a class="white-text right hide-on-med-and-down apply-btn">Apply</a>
      <a class="white-text right hide-on-med-and-down" target="_blank" href="http://www.franciscan.edu">Franciscan.edu</a>
      </div>
    </div>

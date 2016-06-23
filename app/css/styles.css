@@ -3758,6 +3758,33 @@ main {
 #program-modal .container.show {
   display: block; }
 
+.apply-btn {
+  cursor: pointer; }
+
+#apply-modal {
+  background-image: url(../img/fleur2.svg);
+  background-size: 20%; }
+  @media screen and (max-width: 600px) {
+    #apply-modal .modal-content {
+      padding: 0; } }
+  #apply-modal .collection {
+    max-width: 600px;
+    margin: 0 auto; }
+    #apply-modal .collection .collection-header h4 {
+      margin-bottom: 0; }
+    #apply-modal .collection .collection-item {
+      cursor: pointer;
+      color: rgba(0, 0, 0, 0.87);
+      padding: 16px 16px 16px 16px; }
+      #apply-modal .collection .collection-item:hover {
+        background-color: #510d0a;
+        color: #fff; }
+    #apply-modal .collection .secondary-content {
+      color: #998643; }
+      @media screen and (max-width: 500px) {
+        #apply-modal .collection .secondary-content {
+          display: none; } }
+
 footer.page-footer {
   background-color: #3E0000;
   margin-top: 0px;
