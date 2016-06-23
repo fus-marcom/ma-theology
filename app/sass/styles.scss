@@ -5,13 +5,8 @@
 @import 'forms/forms';
 
 // Colors
-$primary-400: #7C0000;
 $primary-500: #510d0a;
 $primary-600: #3E0000;
-
-$secondary-A100: #66FFFF;
-$secondary-A200: #1AFFFF;
-$secondary-A400: #cec3c1;
 
 $accent-yellow: #f0cf65;
 $accent-blue: #93b5c6;
@@ -59,17 +54,11 @@ body {
 
 nav {
   background-color: $primary-500;
-  // border: none;
-  // box-shadow: none;
   color: #fff;
   padding: 0 10px;
   transition: top 0.2s ease-in-out;
-  height: 61px;
-  line-height: 61px;
-
-  // @media screen and (min-width: 800px) {
-  //   background-color: rgba(0, 0, 0, 0.2);
-  // }
+  height: 76px;
+  line-height: 79px;
 
   .button-collapse {
     color: #fff;
@@ -158,16 +147,12 @@ body {
   font-size: 16px;
   display: flex;
   min-height: 100vh;
-
-  //display: flex
   flex-direction: column;
 }
 
 main {
   flex: 1 0 auto;
   margin-top: -56px;
-  //background-color: #fff;
-
   @media only screen and (min-width: 601px) {
     margin-top: -64px;
   }
@@ -212,40 +197,11 @@ main {
   }
 }
 
+// TODO: Put holy door images here
 // #home {
 //   @include section-backgrounds("../img/top-img-500w.jpg", "../img/top-img-650w.jpg", "../img/top-img-1300w.jpg", "../img/test.png");
-//   min-height: 100vh;
-//   //padding-top: 50px;
 // }
 
-#life {
-  @include section-backgrounds("../img/life2-500w.jpg", "../img/life2-650w.jpg", "../img/life2-1300w.jpg", "../img/life2-2000w.jpg");
-}
-
-#faith {
-  @include section-backgrounds("../img/faith2-500w.jpg", "../img/faith2-650w.jpg", "../img/faith2-1300w.jpg", "../img/faith2-2000w.jpg");
-}
-
-#athletics {
-  @include section-backgrounds("../img/athletics-500w.jpg", "../img/athletics-650w.jpg", "../img/athletics-1300w.jpg", "../img/athletics-2000w.jpg");
-}
-
-#households {
-  @include section-backgrounds("../img/households1-500w.jpg", "../img/households1-650w.jpg", "../img/households1-1300w.jpg", "../img/households1-2000w.jpg");
-}
-
-//#education
-// //+section-backgrounds('https://unsplash.it/600/600?image=1067', 'https://unsplash.it/3000/1000?image=1067')
-//  background: #f4bf61
-
-//#adventure
-//  +section-backgrounds('https://unsplash.it/600/300?image=1025', 'https://unsplash.it/3000/2000?image=1025')
-
-// #success-row
-//   +section-backgrounds('../img/Success-1.jpg', 'https://unsplash.it/3000/1000?image=859')
-
-// #next-step
-//   +section-backgrounds('../img/Life-1.jpg', 'https://unsplash.it/3000/1000?image=0')
 
 #home {
    min-height: 100vh;
@@ -254,11 +210,6 @@ main {
   //    background-attachment: fixed;
   //    background-position: center center;
   //    background-size: cover;
-    //  -webkit-transform: rotate(270deg);
-    //      -moz-transform: rotate(270deg);
-    //      -ms-transform: rotate(270deg);
-    //      -o-transform: rotate(270deg);
-    //      transform: rotate(270deg);
 
   .btn-large {
     font-size: 20px;
@@ -284,14 +235,10 @@ main {
 
   .flow-text {
     font-size: 120%;
-    // background-color: rgba(0, 0, 0, 0.3);
-    // border-radius: 2px;
-    // padding: 16px;
-    // max-width: 465px;
-    // margin: 0 auto;
     line-height: 1.5;
   }
 
+  // TODO: Un-comment this when the hero video is added
   // @media screen and (min-width: 800px) {
   //   background: none;
   // }
@@ -346,7 +293,6 @@ main {
 }
 
 #quote-banner {
-  //background-color: $primary-500;
   padding: 50px 0px;
 
   @media screen and (max-height: 578px) {
@@ -376,71 +322,6 @@ main {
 .activator {
   cursor: pointer;
 }
-
-// Using flexbox to make cards the same height
-// #pick-your-program {
-//
-//   .row{
-//     display: flex;
-//     flex-wrap: wrap;;
-//     justify-content: center;
-//
-//     .col {
-//       display: flex;
-//     }
-//   }
-// }
-
-
-
-// .slider {
-//   height: 10px;
-//   min-height: 100vh;
-//
-//   .indicators {
-//     z-index: 2;
-//     margin-bottom: 9px;
-//
-//     .indicator-item {
-//       opacity: 0.75;
-//       height: 25px;
-//       width: 25px;
-//       background-color: $fus-green;
-//       margin-bottom: 10px;
-//     }
-//
-//     .indicator-item.active {
-//       background-color: $fus-yellow;
-//       opacity: 1;
-//     }
-//   }
-//
-//   .flow-text {
-//     width: 110%;
-//     margin-left: -5%;
-//   }
-// }
-
-// .slider-text {
-//   background-color: rgba(0, 0, 0, 0.6);
-//   border-radius: 2px;
-//
-//   // div.s2
-//   //   margin-top: calc(50%)
-//   .col {
-//     padding: 0px;
-//   }
-// }
-//
-// .slider-btn {
-//   font-size: 45px;
-//   opacity: 0.75;
-//
-//   &:hover {
-//     opacity: 1;
-//     cursor: pointer;
-//   }
-// }
 
 .txt-shadow {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.39);
@@ -549,7 +430,6 @@ main {
   h5 {
     margin-bottom: 16px;
   }
-
 }
 
 #testimonials {
@@ -570,26 +450,7 @@ main {
     max-width: 160px;
     display: block;
   }
-
 }
-
-
-
-// #adventure {
-//   .card-content {
-//     @media screen and (min-width: 600px) {
-//       min-height: 330px;
-//     }
-//
-//     @media screen and (min-width: 1200px) {
-//       min-height: 299px;
-//     }
-//
-//     @media screen and (min-width: 1563px) {
-//       min-height: 225px;
-//     }
-//   }
-// }
 
 #success {
   p {
@@ -607,46 +468,6 @@ main {
 .bold {
   font-weight: 500;
 }
-
-// #next-step {
-//   background-color: $primary-500;
-//
-//   .btn-large {
-//     width: 200px;
-//     background: transparent;
-//     border: solid #fff 1px;
-//     transition: all 0.8s;
-//
-//     &:hover {
-//       background-color: #fff;
-//       color: #000;
-//     }
-//   }
-//
-//   p {
-//     padding: 15px 15px 0px 18px;
-//   }
-//
-//   #social-icons {
-//     margin-top: 50px;
-//
-//     a {
-//       i {
-//         color: #fff;
-//         font-size: 25px;
-//       }
-//     }
-//
-//     .social-icon {
-//       width: 34px;
-//       margin-top: -3px;
-//
-//       path {
-//         fill: #fff;
-//       }
-//     }
-//   }
-// }
 
 .modal {
   color: rgba(0,0,0,0.87);
@@ -683,7 +504,6 @@ main {
     @media screen and (max-width: 600px) {
       padding: 0;
     }
-
   }
 
   .collection {
@@ -717,7 +537,6 @@ main {
         display: none;
       }
     }
-
   }
 }
 

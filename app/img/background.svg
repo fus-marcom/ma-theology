@@ -1,5 +1,0 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'>
-<rect width='80' height='80' fill='rgba(240,207,101, .15)'/>
-<circle cx='40' cy='40' r='40' fill='#fafafa'/>
-<path d='M0 40 A40 40 45 0 0 40 0 A40 40 315 0 0 80 40 A40 40 45 0 0 40 80 A40 40 270 0 0 0 40Z' fill='rgba(240,207,101, .15)'/>
-</svg>
