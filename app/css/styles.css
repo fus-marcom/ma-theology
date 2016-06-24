@@ -1754,6 +1754,9 @@ main {
 .apply-btn {
   cursor: pointer; }
 
+.call-mike a {
+  color: #998643; }
+
 #apply-modal {
   background-image: url(../img/fleur2.svg);
   background-size: 20%; }

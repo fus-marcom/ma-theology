@@ -284,6 +284,8 @@ main {
   //height: 100%;
   min-height: 100vh;
   top: 0;
+  // -webkit-filter: opacity(.95);
+  // filter: opacity(.5);
 
   @media only screen and (min-width: 501px) {
      background-image: url('../img/holy-door-650w-min.jpg');
@@ -539,6 +541,12 @@ main {
 
 .apply-btn {
   cursor: pointer;
+}
+
+.call-mike {
+  a {
+    color: $fus-gold;
+  }
 }
 
 #apply-modal {
