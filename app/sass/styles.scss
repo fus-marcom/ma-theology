@@ -5,8 +5,8 @@
 @import 'forms/forms';
 
 // Colors
-$primary-500: #510d0a;
-//$primary-500: #21412a;
+// $primary-500: #510d0a;
+$primary-500: #21412a;
 $primary-600: #3E0000;
 
 $accent-yellow: #f0cf65;
@@ -76,7 +76,9 @@ body {
 }
 
 nav {
-  background-color: $primary-500;
+  // background-color: $primary-500;
+  background-color: transparent;
+  box-shadow: none;
   color: #fff;
   padding: 0 10px;
   transition: top 0.2s ease-in-out;
@@ -228,9 +230,9 @@ main {
 
 #home {
    min-height: 100vh;
-   padding-top: 100px;
-   background-color: rgba(0, 0, 0, 0.35);
-  //  background-image: url('../img/holy-door-open.jpg');
+   padding-top: 0;
+   background-color: rgba(0, 0, 0, 0.4);
+  //  background-image: url('../img/holy-door-1400w-min.jpg');
   //    background-attachment: fixed;
   //    background-position: center center;
   //    background-size: cover;
@@ -263,9 +265,18 @@ main {
   }
 
   // TODO: Un-comment this when the hero video is added
-  // @media screen and (min-width: 800px) {
-  //   background: none;
-  // }
+  @media screen and (min-width: 800px) {
+    background: none;
+  }
+
+  #replay {
+    display: block;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    cursor: pointer;
+  }
+
 }
 
 #home:before {
@@ -277,7 +288,7 @@ main {
 
   display: block;
   background-image: url('../img/holy-door-500w-min.jpg');
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -294,6 +305,7 @@ main {
   @media only screen and (min-width: 601px) {
     background-image: url('../img/holy-door-1400w-min.jpg');
     // background-image: url('../img/holy-door-open.jpg');
+    background-attachment: fixed;
   }
 
   @media only screen and (max-height: 410px) {
@@ -351,6 +363,8 @@ main {
 #why-franciscan {
   background-color: $primary-500;
   padding: 25px 0;
+  border-top: 5px solid #998643;
+  border-bottom: 5px solid #998643;
 }
 
 .card-video {
@@ -470,6 +484,8 @@ main {
 #program-banner {
   background-color: $primary-500;
   padding: 50px 0px;
+  border-top: 5px solid #998643;
+  border-bottom: 5px solid #998643;
 
   @media screen and (max-height: 578px) {
     padding: 15px 0px;
@@ -527,7 +543,11 @@ main {
 
 #program-modal {
   .btn-large {
-    background-color: $fus-dark-blue;
+    background-color: $primary-500;
+  }
+
+  #results-btn-row {
+    margin-bottom: 50px;
   }
 
   .container.hide {
@@ -536,6 +556,39 @@ main {
 
   .container.show {
     display: block;
+  }
+
+  #social-icons{
+    margin-top: 50px;
+
+     a {
+
+       i {
+         color: $fus-gold;
+         font-size: 25px;
+         transition: all .3s;
+
+        //  &:hover {
+        //    color: $fus-green;
+        //  }
+       }
+
+     .social-icon {
+       width: 34px;
+       margin-top: -3px;
+
+      //  &:hover {
+      //    path {
+      //      fill: $fus-green;
+      //    }
+      //  }
+
+       path {
+         fill: $fus-gold;
+         transition: all .3s;
+       }
+     }
+    }
   }
 }
 
@@ -595,9 +648,11 @@ main {
 }
 
 footer.page-footer {
-  background-color: $primary-600;
+  // background-color: $primary-600;
+  background-color: $primary-500;
   margin-top: 0px;
   padding-top: 0px;
+  border-top: solid 5px $fus-gold;
 
   .row {
     margin-bottom: 0px;

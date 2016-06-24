@@ -1436,11 +1436,11 @@ form p:last-child {
   background-color: #21412a; }
 
 #red-theme {
-  background-color: #510d0a; }
+  background-color: #21412a; }
 
 #red-green-theme {
   background-color: #21412a;
-  border: 10px solid #510d0a;
+  border: 10px solid #21412a;
   line-height: 37px; }
 
 .black-text {
@@ -1468,7 +1468,8 @@ body {
     line-height: 76px; } }
 
 nav {
-  background-color: #510d0a;
+  background-color: transparent;
+  box-shadow: none;
   color: #fff;
   padding: 0 10px;
   transition: top 0.2s ease-in-out;
@@ -1540,8 +1541,8 @@ main {
 
 #home {
   min-height: 100vh;
-  padding-top: 100px;
-  background-color: rgba(0, 0, 0, 0.35); }
+  padding-top: 0;
+  background-color: rgba(0, 0, 0, 0.4); }
   #home .btn-large {
     font-size: 20px;
     text-shadow: none; }
@@ -1558,6 +1559,15 @@ main {
   #home .flow-text {
     font-size: 120%;
     line-height: 1.5; }
+  @media screen and (min-width: 800px) {
+    #home {
+      background: none; } }
+  #home #replay {
+    display: block;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    cursor: pointer; }
 
 #home:before {
   content: "";
@@ -1567,7 +1577,7 @@ main {
   z-index: -1;
   display: block;
   background-image: url("../img/holy-door-500w-min.jpg");
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -1578,7 +1588,8 @@ main {
       background-image: url("../img/holy-door-650w-min.jpg"); } }
   @media only screen and (min-width: 601px) {
     #home:before {
-      background-image: url("../img/holy-door-1400w-min.jpg"); } }
+      background-image: url("../img/holy-door-1400w-min.jpg");
+      background-attachment: fixed; } }
   @media only screen and (max-height: 410px) {
     #home:before {
       min-height: 200vh; } }
@@ -1621,8 +1632,10 @@ main {
       background-attachment: fixed; } }
 
 #why-franciscan {
-  background-color: #510d0a;
-  padding: 25px 0; }
+  background-color: #21412a;
+  padding: 25px 0;
+  border-top: 5px solid #998643;
+  border-bottom: 5px solid #998643; }
 
 .card-video {
   -webkit-transition: box-shadow .25s;
@@ -1702,8 +1715,10 @@ main {
       color: #b4ccd8; }
 
 #program-banner {
-  background-color: #510d0a;
-  padding: 50px 0px; }
+  background-color: #21412a;
+  padding: 50px 0px;
+  border-top: 5px solid #998643;
+  border-bottom: 5px solid #998643; }
   @media screen and (max-height: 578px) {
     #program-banner {
       padding: 15px 0px; } }
@@ -1719,7 +1734,7 @@ main {
   transform: translateY(0); }
 
 #testimonials .btn-large {
-  background-color: #510d0a;
+  background-color: #21412a;
   margin: 0 auto;
   max-width: 160px;
   display: block; }
@@ -1743,13 +1758,29 @@ main {
   max-height: 75%; }
 
 #program-modal .btn-large {
-  background-color: #1f2a44; }
+  background-color: #21412a; }
+
+#program-modal #results-btn-row {
+  margin-bottom: 50px; }
 
 #program-modal .container.hide {
   display: none; }
 
 #program-modal .container.show {
   display: block; }
+
+#program-modal #social-icons {
+  margin-top: 50px; }
+  #program-modal #social-icons a i {
+    color: #998643;
+    font-size: 25px;
+    transition: all .3s; }
+  #program-modal #social-icons a .social-icon {
+    width: 34px;
+    margin-top: -3px; }
+    #program-modal #social-icons a .social-icon path {
+      fill: #998643;
+      transition: all .3s; }
 
 .apply-btn {
   cursor: pointer; }
@@ -1773,7 +1804,7 @@ main {
       color: rgba(0, 0, 0, 0.87);
       padding: 16px 16px 16px 16px; }
       #apply-modal .collection .collection-item:hover {
-        background-color: #510d0a;
+        background-color: #21412a;
         color: #fff; }
     #apply-modal .collection .secondary-content {
       color: #998643; }
@@ -1782,9 +1813,10 @@ main {
           display: none; } }
 
 footer.page-footer {
-  background-color: #3E0000;
+  background-color: #21412a;
   margin-top: 0px;
-  padding-top: 0px; }
+  padding-top: 0px;
+  border-top: solid 5px #998643; }
   footer.page-footer .row {
     margin-bottom: 0px;
     margin-top: 10px; }

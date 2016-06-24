@@ -21,6 +21,7 @@
             <li><a class="color-modal-btn modal-trigger" href="#color-modal">Change Colors</a></li>
             <li><a class="slow-nav" href="#quote-banner">Why Franciscan?</a></li>
             <li><a class="slow-nav" href="#pick-your-program">Choose Your Program</a></li>
+            <li><a class="modal-trigger" href="#program-modal">Quiz</a></li>
             <li><a class="slow-nav" href="#testimonials">Accolades</a></li>
             <li><a class="contact-modal-btn">Contact</a></li>
             <li class="apply-btn">
@@ -40,6 +41,7 @@
     <li><a class="color-modal-btn modal-trigger" href="#color-modal">Change Colors</a></li>
     <li><a class="slow-nav" href="#quote-banner">Why Franciscan?</a></li>
     <li><a class="slow-nav" href="#pick-your-program">Choose Your Program</a></li>
+    <li><a class="modal-trigger" href="#program-modal">Quiz</a></li>
     <li><a class="slow-nav" href="#testimonials">Accolades</a></li>
     <li><a class="contact-modal-btn">Contact</a></li>
     <li>
@@ -50,12 +52,13 @@
   <main>
     <!-- Home Section -->
     <div class="section valign-wrapper txt-shadow z-depth-1" id="home" name="#home">
-      <!-- <div class="parallax">
-        <video autoplay loop  poster="img/hero-placeholder-op.jpg" id="bgvid">
-          <source src="video/hero-vid-720.mp4" type="video/mp4">
+      <div class="parallax">
+        <video autoplay poster="img/hero-placeholder.png" id="bgvid">
+          <source src="video/ma-theology-720p.mp4" type="video/mp4">
         </video>
-        <a href="#why-franciscan" class="slow-nav"><i class="large icon-chevron-down" id="down-icon"></i></a>
-      </div> -->
+        <i class="large material-icons" id="replay">play_arrow</i>
+        <!-- <a href="#why-franciscan" class="slow-nav"><i class="large icon-chevron-down" id="down-icon"></i></a> -->
+      </div>
       <div class="valign container">
         <div class="row">
           <h3 class="center header light">Evangelize the World</h3>
@@ -101,7 +104,7 @@
           <div class="col s12 l6">
             <h5 class="center white-text light">Respected</h5>
             <div class="video-container card-video" id="major-video">
-             <iframe src="//www.youtube.com/embed/fKf2QPB-Jt4?rel=0&amp;amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+             <iframe src="//www.youtube.com/embed/trLYEZ7v_eQ?rel=0&amp;amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
             </div>
           </div>
           <div class="col s12 l6">
@@ -349,7 +352,7 @@
         <div class="row center">
           <h5 class="center header light white-text">Need help deciding?</h5>
           <!-- This needs to open a the Find your program modal.  -->
-          <a href="#program-modal" class="modal-trigger btn-large waves-effect waves-light btn-inverse">Let us help</a>
+          <a href="#program-modal" class="modal-trigger btn-large waves-effect waves-light btn-inverse">Take Our Quiz</a>
         </div>
       </div>
     </div>
@@ -476,6 +479,9 @@
           <div class="row center" id="results-btn-row">
             <button id="results-try-again" class="btn-large waves-effect waves-light try-again">Try again</button>
           </div>
+          <div class="col s12">
+            <h5 class="center">Contact Us</h5>
+          </div>
           <div class="row">
             <div class="col s12">
               <form action="#" id="modal-request-info-form">
@@ -496,6 +502,25 @@
               <div class="row center">
                 <button id="submit-info" class="btn-large waves-effect waves-light">Tell me more</button>
               </div>
+
+              <div id="social-icons" class="row center">
+                <div class="col s2 offset-s2">
+                  <a target="_blank" href="http://www.facebook.com/FranciscanUniversity" ><i class="icon-facebook"></i></a>
+                </div>
+                <div class="col s2">
+                  <a target="_blank" href="http://www.twitter.com/FranciscanU"><i class="icon-twitter"></i></a>
+                </div>
+                <div class="col s2">
+                  <a target="_blank" href="http://instagram.com/franciscanuniversity">
+                    <svg viewBox="0 0 800 800" class="social-icon">
+                      <path d="M150 400c0-119 0-166 42-208s88-42 208-42 166 0 208 42 42 89 42 208 0 166-42 208-88 42-208 42-166 0-208-42-42-89-42-208zm455 0c0-114 0-148-29-176-29-29-62-29-176-29s-148 0-176 29c-29 29-29 62-29 176s0 148 29 176c29 29 62 29 176 29s148 0 176-29c29-29 29-62 29-176zM400 272a128 128 0 1 1 0 256 128 128 0 0 1 0-256zm0 211c46 0 83-37 83-83s-37-83-83-83-83 37-83 83 37 83 83 83zm163-216c0 16-13 30-30 30-16 0-30-14-30-30 0-17 14-30 30-30 17 0 30 13 30 30z"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="col s2">
+                  <a target="_blank" href="https://www.youtube.com/user/FranciscanUSteubie"><i class="icon-youtube-play"></i></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -505,7 +530,7 @@
               <h4 class="center">Thank you for your interest!</h4>
             </div>
             <div class="col s12 center">
-              <h5 id="program-name">You made the right choice. From now on your life is going to be awesome!</h5>
+              <h5 id="program-name">We will be in contact with you soon.</h5>
             </div>
           </div>
           <!-- <div class="row center">
@@ -515,10 +540,10 @@
         <div class="container failure-container valign">
           <div class="row">
             <div class="col s12">
-              <h4 class="center">Oh No!</h4>
+              <h4 class="center">Something went wrong.</h4>
             </div>
             <div class="col s12 center">
-              <h5 id="program-name">Something went wrong with your submission. Try again...or maybe this is a sign and you should spend more time discerning.</h5>
+              <h5 id="program-name">Your submission was not sent. Please try again or contact us directly.</h5>
             </div>
           </div>
           <div class="row center">

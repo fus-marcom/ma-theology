@@ -1,15 +1,58 @@
 $(function() {
 
 
+  //Fix for background image resize on mobile
+  // var bg = $('#home::before');
+  // $(window).resize(resizeBackground());
+  // function resizeBackground() {
+  //   bg.height($(window).height() + 60);
+  //   console.log('resize');
+  //
+  // }
+
+//  resizeBackground();
+
+
+
+// Pop up banner for quiz
+var $quoteBanner =  $('#quote-banner'),
+  bannerPos = $($quoteBanner).scrollTop();
+
+$(window).scroll(function(){
+console.log(bannerPos);
+
+});
+
+
+
+  // TODO: add a pause button
+  //Background hero video controls
+  var $vid = $('#bgvid'),
+      $replay = $('#replay');
+
+  $replay.hide();
+
+  $vid.on('ended',function(){
+      $vid[0].currentTime = '1';
+      $replay.show();
+    });
+
+    $replay.click(function(){
+      $vid[0].play();
+    });
+
+
+
+
   // Colors
   $('#green-theme').click(function(){
     $('nav, footer, #why-franciscan, #program-banner, .read-more').css('background-color', '#21412a');
-      $('#color-modal').closeModal();
+    $('#color-modal').closeModal();
   });
 
   $('#red-theme').click(function(){
     $('nav, footer, #why-franciscan, #program-banner, .read-more').css('background-color', '#510d0a');
-      $('#color-modal').closeModal();
+    $('#color-modal').closeModal();
   });
 
   $('#red-green-theme').click(function(){
@@ -105,6 +148,7 @@ $(function() {
        } else {
          resultsTemplate = resultsTemplate + '<h5 class="program-name">or MA Theology: Research Intensive Track</h5>';
        }
+       count++;
      }
 
      //
@@ -112,6 +156,10 @@ $(function() {
      //
 
      if (count === 0) {
+       if ($(this).attr('id') === 'fail-try-again') {
+         $('#program-modal .container').addClass('hide');
+         $('.results-container').removeClass('hide').addClass('show');
+       }
 
      } else {
        if  (count > 0) {
