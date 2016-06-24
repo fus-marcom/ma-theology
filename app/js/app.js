@@ -14,16 +14,49 @@ $(function() {
 
 
 
+
 // Pop up banner for quiz
-var $quoteBanner =  $('#quote-banner'),
-  bannerPos = $($quoteBanner).scrollTop();
+var $programSection =  $('#pick-your-program'),
+  programPos = $($programSection).offset().top,
+  $bannerSection =  $('#program-banner'),
+    bannerPos = $($bannerSection).offset().top,
+    scrollPos;
 
 $(window).scroll(function(){
-console.log(bannerPos);
+  scrollPos = $('body').scrollTop();
+  //console.log(programPos);
+  console.log(scrollPos);
+
+  // TODO: find a way to make this transition smooth like on the devtips videos
+  if (scrollPos > programPos - 650) {
+
+    $('#pop-up-banner').css('transform', 'translateY(1%)');
+  }
+
+  if (scrollPos > bannerPos - 650 || scrollPos < programPos - 650) {
+    $('#pop-up-banner').css('transform', 'translateY(100%)');
+  }
+
+//console.log($('body').scrollTop());
 
 });
 
+$('#pop-up-banner').click(function(){
+  $('#program-modal').openModal();
+});
 
+var $quoteSection =  $('#quote-banner'),
+  quotePos = $($quoteSection).offset().top;
+
+$(window).scroll(function(){
+  if (scrollPos > quotePos - 76) {
+    $('nav').css('background-color', 'rgba(0, 0, 0, 0.36)');
+  }
+
+  if (scrollPos < quotePos - 76) {
+    $('nav').css('background-color', 'transparent');
+  }
+});
 
   // TODO: add a pause button
   //Background hero video controls

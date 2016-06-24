@@ -481,6 +481,22 @@ main {
   }
 }
 
+#pop-up-banner {
+  background-color:$fus-gold;
+//  border-top: solid 5px $fus-gold;
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  z-index: 999;
+  transform: translateY(100%);
+  cursor: pointer;
+
+  .row {
+    margin-bottom: 0;
+  }
+}
+
 #program-banner {
   background-color: $primary-500;
   padding: 50px 0px;

@@ -1714,6 +1714,18 @@ main {
     #pick-your-program .collapsible .card-action a:hover {
       color: #b4ccd8; }
 
+#pop-up-banner {
+  background-color: #998643;
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  transform: translateY(100%);
+  cursor: pointer; }
+  #pop-up-banner .row {
+    margin-bottom: 0; }
+
 #program-banner {
   background-color: #21412a;
   padding: 50px 0px;
