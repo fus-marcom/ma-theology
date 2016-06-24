@@ -1,5 +1,24 @@
 $(function() {
 
+
+  // Colors
+  $('#green-theme').click(function(){
+    $('nav, footer, #why-franciscan, #program-banner, .read-more').css('background-color', '#21412a');
+      $('#color-modal').closeModal();
+  });
+
+  $('#red-theme').click(function(){
+    $('nav, footer, #why-franciscan, #program-banner, .read-more').css('background-color', '#510d0a');
+      $('#color-modal').closeModal();
+  });
+
+  $('#red-green-theme').click(function(){
+    $('nav, footer').css('background-color', '#21412a');
+    $('#why-franciscan, #program-banner, .read-more').css('background-color', '#510d0a');
+    $('#color-modal').closeModal();
+
+  });
+
   //Init side nav
   $(".button-collapse").sideNav({
     closeOnClick: true

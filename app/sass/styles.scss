@@ -6,6 +6,7 @@
 
 // Colors
 $primary-500: #510d0a;
+//$primary-500: #21412a;
 $primary-600: #3E0000;
 
 $accent-yellow: #f0cf65;
@@ -24,6 +25,24 @@ $fus-green: #21412a;
 $fus-gold: #998643;
 
 $black-87: rgba(0, 0, 0, .87);
+
+
+
+// Colors
+#green-theme {
+  background-color: $fus-green;
+}
+
+#red-theme {
+  background-color: $primary-500;
+}
+
+#red-green-theme {
+  background-color: $fus-green;
+  border: 10px solid $primary-500;
+  line-height: 37px;
+}
+
 
 .black-text {
   color: rgba(0, 0, 0, .87) !important;
@@ -63,6 +82,7 @@ nav {
   transition: top 0.2s ease-in-out;
   height: 64px;
   line-height: 64px;
+  // border-bottom: solid 2px $fus-gold;
 
   @media only screen and (min-width: 601px) {
     height: 76px;

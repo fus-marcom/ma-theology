@@ -1432,6 +1432,17 @@ form p:last-child {
   background-color: #BDBDBD;
   border-color: #BDBDBD; }
 
+#green-theme {
+  background-color: #21412a; }
+
+#red-theme {
+  background-color: #510d0a; }
+
+#red-green-theme {
+  background-color: #21412a;
+  border: 10px solid #510d0a;
+  line-height: 37px; }
+
 .black-text {
   color: rgba(0, 0, 0, 0.87) !important; }
 
