@@ -44,6 +44,8 @@ $(window).scroll(function(){
 
 $('#pop-up-banner').click(function(){
   $('#program-modal').openModal();
+  $('#program-modal .container').addClass('hide');
+  $('.program-question-container').removeClass('hide').addClass('show');
 });
 
 var $quoteSection =  $('#quote-banner'),

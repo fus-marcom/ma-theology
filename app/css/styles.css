@@ -1545,7 +1545,8 @@ main {
   background-color: rgba(0, 0, 0, 0.4); }
   #home .btn-large {
     font-size: 20px;
-    text-shadow: none; }
+    text-shadow: none;
+    min-width: 270px; }
   @media screen and (max-height: 578px) {
     #home {
       padding-top: 76px; }
@@ -1797,18 +1798,27 @@ main {
 #program-modal .container.show {
   display: block; }
 
-#program-modal #social-icons {
-  margin-top: 50px; }
-  #program-modal #social-icons a i {
+#program-modal #submit-info {
+  margin-top: 16px; }
+
+.social-icons {
+  margin-top: 32px; }
+  .social-icons a i {
     color: #998643;
     font-size: 25px;
     transition: all .3s; }
-  #program-modal #social-icons a .social-icon {
+  .social-icons a .social-icon {
     width: 34px;
     margin-top: -3px; }
-    #program-modal #social-icons a .social-icon path {
+    .social-icons a .social-icon path {
       fill: #998643;
       transition: all .3s; }
+
+#why-franciscan a i {
+  color: #fff; }
+
+#why-franciscan a path {
+  fill: #fff; }
 
 .apply-btn {
   cursor: pointer; }

@@ -240,6 +240,7 @@ main {
   .btn-large {
     font-size: 20px;
     text-shadow: none;
+    min-width: 270px;
   }
 
   @media screen and (max-height: 578px) {
@@ -598,36 +599,56 @@ main {
     display: block;
   }
 
-  #social-icons{
-    margin-top: 50px;
+  #submit-info {
+    margin-top: 16px;
+  }
 
-     a {
 
-       i {
-         color: $fus-gold;
-         font-size: 25px;
-         transition: all .3s;
+}
 
-        //  &:hover {
-        //    color: $fus-green;
-        //  }
-       }
+.social-icons{
+  margin-top: 32px;
 
-     .social-icon {
-       width: 34px;
-       margin-top: -3px;
+   a {
+
+     i {
+       color: $fus-gold;
+       font-size: 25px;
+       transition: all .3s;
 
       //  &:hover {
-      //    path {
-      //      fill: $fus-green;
-      //    }
+      //    color: $fus-green;
       //  }
-
-       path {
-         fill: $fus-gold;
-         transition: all .3s;
-       }
      }
+
+   .social-icon {
+     width: 34px;
+     margin-top: -3px;
+
+    //  &:hover {
+    //    path {
+    //      fill: $fus-green;
+    //    }
+    //  }
+
+     path {
+       fill: $fus-gold;
+       transition: all .3s;
+     }
+   }
+  }
+}
+
+#why-franciscan {
+
+  a {
+
+    i {
+      color: #fff;
+    }
+
+    path {
+      fill: #fff;
     }
   }
 }
