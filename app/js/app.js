@@ -66,7 +66,7 @@ $(window).scroll(function(){
   $replay.hide();
 
   $vid.on('ended',function(){
-      $vid[0].currentTime = '1';
+      $vid[0].currentTime = '2';
       $replay.show();
     });
 
