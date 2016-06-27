@@ -29,12 +29,12 @@ $(window).scroll(function(){
   console.log(scrollPos);
 
   // TODO: find a way to make this transition smooth like on the devtips videos
-  if (scrollPos > programPos - programHeight) {
+  if (scrollPos > programPos - (programHeight/2)) {
 
     $('#pop-up-banner').css('transform', 'translateY(1%)');
   }
 
-  if (scrollPos > bannerPos - 650 || scrollPos < programPos - programHeight) {
+  if (scrollPos > bannerPos - (programHeight/2) || scrollPos < programPos - (programHeight/2)) {
     $('#pop-up-banner').css('transform', 'translateY(100%)');
   }
 
