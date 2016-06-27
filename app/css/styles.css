@@ -1744,6 +1744,13 @@ main {
       padding: 15px 0px; } }
   #program-banner h5 {
     margin-bottom: 16px; }
+  #program-banner p {
+    font-weight: 200; }
+    #program-banner p .bold {
+      font-style: normal; }
+    #program-banner p .bullet {
+      font-style: normal;
+      padding: 0 5px; }
 
 #testimonials .expansion-container.hide {
   display: none;

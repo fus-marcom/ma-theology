@@ -520,6 +520,19 @@ main {
   h5 {
     margin-bottom: 16px;
   }
+
+  p {
+    font-weight: 200;
+
+    .bold {
+      font-style: normal;
+    }
+
+    .bullet {
+      font-style:normal;
+      padding: 0 5px;
+    }
+  }
 }
 
 #testimonials {
