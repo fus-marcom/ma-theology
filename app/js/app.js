@@ -232,20 +232,6 @@ $(window).scroll(function(){
 
    });
 
-   // Submit btn on results/more info modal view
-   $('#submit-info').click(function(){
-     //Get data from form and send it to google sheet
-
-     if ($('#name').val() !== "") {
-     //On success
-     $('.results-container').removeClass('show').addClass('hide');
-     $('.success-container').removeClass('hide').addClass('show');
-     } else {
-       //On failure
-       // maybe try again?
-       $('.results-container').removeClass('show').addClass('hide');
-       $('.failure-container').removeClass('hide').addClass('show');
-      }
 
       // Send to Google Sheet
 
@@ -253,10 +239,10 @@ $(window).scroll(function(){
       var request, checkLength;
 
       // Bind to the submit event of our form
-      $("#modal-request-info-form #submit-info").click(function(event){
+      $("#submit-info").click(function(event){
 
           //Hidden checkbox to help prevent spam submissions
-          checkLength = $('#checkbox-2:checked').length > 0;
+          checkLength = $('#checkbox-2:checked').length === 0;
 
           if (checkLength === true) {
 
@@ -271,36 +257,36 @@ $(window).scroll(function(){
           // Let's select and cache all the fields
           var $inputs = $form.find("input, select, button, textarea"),
               $name, $val, i, $thisCheckbox,
-              $formElements = $($form).find("input, select, button, textarea").not('input[type=checkbox]'),
-              $formCheckboxes = $($form).find('input[type=checkbox]');
+              $formElements = $($form).find("input, select, button, textarea").not('input[type=checkbox]');
+            //  $formCheckboxes = $($form).find('input[type=checkbox]');
 
 
           // Serialize the data in the form
           var serializedFormElements = '';
-          var serializedCheckboxData = '';
+          //var serializedCheckboxData = '';
           var serializedData = '';
 
           // Serialize checkbox data
           // loop through checkboxes
-          for (i = 0; i < $formCheckboxes.length; i++) {
-            $thisCheckbox = $formCheckboxes[i]; //cache the current checkbox
-            $name = $($thisCheckbox).attr('name'); // get checkbox name
-            // Assign checkbox values of yes or '' based on the checked property
-            if ($($thisCheckbox).prop('checked') === true) {
-              $($thisCheckbox).val('yes');
-            }
-            $val = $($thisCheckbox).val(); //get checkbox val
-            serializedCheckboxData = serializedCheckboxData + $name + '=' + $val + '&';     // Serialize
-          }
+          // for (i = 0; i < $formCheckboxes.length; i++) {
+          //   $thisCheckbox = $formCheckboxes[i]; //cache the current checkbox
+          //   $name = $($thisCheckbox).attr('name'); // get checkbox name
+          //   // Assign checkbox values of yes or '' based on the checked property
+          //   if ($($thisCheckbox).prop('checked') === true) {
+          //     $($thisCheckbox).val('yes');
+          //   }
+          //   $val = $($thisCheckbox).val(); //get checkbox val
+          //   serializedCheckboxData = serializedCheckboxData + $name + '=' + $val + '&';     // Serialize
+          // }
 
           // Serialize other form data
             for (i = 0; i < $formElements.length; i++) {
-              $name = $($formElements[i]).attr('name');
+              $name = $($formElements[i]).attr('id');
               $val = $($formElements[i]).val();
               serializedFormElements = serializedFormElements + $name + '=' + $val + '&';
             }
 
-          serializedData = serializedFormElements + serializedCheckboxData;  //Concat all form input serialized data
+          serializedData = serializedFormElements;  //Concat all form input serialized data
 
           // Let's disable the inputs for the duration of the Ajax request.
           // Note: we disable elements AFTER the form data has been serialized.
@@ -309,7 +295,7 @@ $(window).scroll(function(){
 
           // Fire off the request to /form.php
           request = $.ajax({
-              url: "https://script.google.com/macros/s/AKfycbwLJ4JBN2bJzJHluORmmzDV0DSc71vexNuQA8xtUkoG-ccjWi8a/exec",
+              url: "https://script.google.com/macros/s/AKfycbzBnwogNzYZaYnH1iABGfs4G8Pm0dlSraLDtHfW-s3aduwPlnSw/exec",
               type: "post",
               data: serializedData
           });
@@ -322,8 +308,9 @@ $(window).scroll(function(){
               console.log(textStatus);
               console.log(jqXHR);
               $("#modal-request-info-form input, #modal-request-info-form textarea").val("");
-              $("#modal-request-info-form input:checkbox").prop('checked', "");
-              $('#successModal').modal();
+              //$("#modal-request-info-form input:checkbox").prop('checked', "");
+              $('.results-container').removeClass('show').addClass('hide');
+              $('.success-container').removeClass('hide').addClass('show');
 
           });
 
@@ -337,9 +324,11 @@ $(window).scroll(function(){
 
               // HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
               if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0){
-                $('#successModal').modal();
+                $('.results-container').removeClass('show').addClass('hide');
+                $('.success-container').removeClass('hide').addClass('show');
               } else {
-                $('#failModal').modal();
+                $('.results-container').removeClass('show').addClass('hide');
+                $('.failure-container').removeClass('hide').addClass('show');
               }
           });
 
@@ -358,8 +347,6 @@ $(window).scroll(function(){
         }
       });
       //End Send to Google Sheet
-
-   });
 
    $('#results-try-again').click(function(){
      count = 0;
