@@ -1553,7 +1553,8 @@ main {
         display: none; } }
   #home .parallax {
     z-index: 1;
-    overflow: hidden; }
+    overflow: hidden;
+    left: -250px; }
   #home .valign.container {
     z-index: 2; }
   #home .flow-text {
