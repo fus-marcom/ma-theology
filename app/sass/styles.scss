@@ -269,14 +269,19 @@ main {
     background: none;
   }
 
-  #replay {
-    display: block;
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    cursor: pointer;
-  }
+  #replay, #pause {
+    display: none;
 
+    @media screen and (min-width: 800px) {
+      display: block;
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      cursor: pointer;
+      opacity: .5;
+      font-size: 48px;
+    }
+  }
 }
 
 #home:before {
@@ -484,7 +489,7 @@ main {
 #pop-up-banner {
   background-color:$fus-gold;
 //  border-top: solid 5px $fus-gold;
-  padding: 16px;
+  padding: 10px 8px;
   position: fixed;
   bottom: 0;
   width:100%;
@@ -494,6 +499,10 @@ main {
 
   .row {
     margin-bottom: 0;
+
+    h6 {
+      font-size: 16px;
+    }
   }
 }
 

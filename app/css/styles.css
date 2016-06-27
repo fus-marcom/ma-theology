@@ -1562,12 +1562,17 @@ main {
   @media screen and (min-width: 800px) {
     #home {
       background: none; } }
-  #home #replay {
-    display: block;
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    cursor: pointer; }
+  #home #replay, #home #pause {
+    display: none; }
+    @media screen and (min-width: 800px) {
+      #home #replay, #home #pause {
+        display: block;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        cursor: pointer;
+        opacity: .5;
+        font-size: 48px; } }
 
 #home:before {
   content: "";
@@ -1716,7 +1721,7 @@ main {
 
 #pop-up-banner {
   background-color: #998643;
-  padding: 16px;
+  padding: 10px 8px;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -1725,6 +1730,8 @@ main {
   cursor: pointer; }
   #pop-up-banner .row {
     margin-bottom: 0; }
+    #pop-up-banner .row h6 {
+      font-size: 16px; }
 
 #program-banner {
   background-color: #21412a;

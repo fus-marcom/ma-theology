@@ -18,6 +18,7 @@ $(function() {
 // Pop up banner for quiz
 var $programSection =  $('#pick-your-program'),
   programPos = $($programSection).offset().top,
+  programHeight = $($programSection).height(),
   $bannerSection =  $('#program-banner'),
     bannerPos = $($bannerSection).offset().top,
     scrollPos;
@@ -28,12 +29,12 @@ $(window).scroll(function(){
   console.log(scrollPos);
 
   // TODO: find a way to make this transition smooth like on the devtips videos
-  if (scrollPos > programPos - 650) {
+  if (scrollPos > programPos - programHeight) {
 
     $('#pop-up-banner').css('transform', 'translateY(1%)');
   }
 
-  if (scrollPos > bannerPos - 650 || scrollPos < programPos - 650) {
+  if (scrollPos > bannerPos - 650 || scrollPos < programPos - programHeight) {
     $('#pop-up-banner').css('transform', 'translateY(100%)');
   }
 
@@ -61,17 +62,33 @@ $(window).scroll(function(){
   // TODO: add a pause button
   //Background hero video controls
   var $vid = $('#bgvid'),
-      $replay = $('#replay');
+      $replay = $('#replay'),
+      $pause = $('#pause');
 
   $replay.hide();
 
+  $vid.on('playing',function(){
+      $replay.hide();
+      $pause.show();
+
+    });
+
   $vid.on('ended',function(){
       $vid[0].currentTime = '2';
+      $pause.hide();
       $replay.show();
     });
 
     $replay.click(function(){
       $vid[0].play();
+      $pause.hide();
+      $replay.show();
+    });
+
+    $pause.click(function(){
+      $vid[0].pause();
+      $pause.hide();
+      $replay.show();
     });
 
 
