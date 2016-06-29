@@ -12,6 +12,39 @@ $(function() {
 
 //  resizeBackground();
 
+//Fix for modal issues in ios
+
+//If not ios, then remove contact form section
+if( navigator.userAgent.match(/iPhone|iPad|iPod/i) === null ) {
+  $('#contact').remove();
+}
+
+// iOS check...ugly but necessary
+if( navigator.userAgent.match(/iPhone|iPad|iPod/i) ) {
+  console.log(navigator.userAgent);
+
+  //Remove contact form from modal
+  // $('#program-modal #modal-request-info-form').parent().parent().remove();
+  // $('#contact-header').parent().remove();
+  $('#results-container').remove();
+
+  //Make contact buttons go to new contact section
+  $('.contact-modal-btn').attr('href', '#contact').addClass('slow-nav').removeClass('contact-modal-btn');
+
+  //Add class to question modal and footer
+  $('#program-modal, footer').addClass('is-ios');
+  $('.is-ios #find-program-btn').click(function(){
+    scrollToAnchor('#contact');
+    $('#program-modal').closeModal();
+  });
+
+  //Open modal on submit
+  $('#contact #submit-info').click(function(){
+    $('#program-modal .container').removeClass('show').addClass('hide');
+    $('#program-modal').openModal();
+  });
+
+}
 
 
 
@@ -25,8 +58,6 @@ var $programSection =  $('#pick-your-program'),
 
 $(window).scroll(function(){
   scrollPos = $('body').scrollTop();
-  //console.log(programPos);
-  console.log(scrollPos);
 
   // TODO: find a way to make this transition smooth like on the devtips videos
   if (scrollPos > programPos - (programHeight/2)) {
@@ -67,7 +98,7 @@ $(window).scroll(function(){
       $replay = $('#replay'),
       $pause = $('#pause');
 
-  $replay.hide();
+  $pause.hide();
 
   $vid.on('playing',function(){
       $replay.hide();
@@ -76,7 +107,7 @@ $(window).scroll(function(){
     });
 
   $vid.on('ended',function(){
-      $vid[0].currentTime = '2';
+      $vid[0].currentTime = '0';
       $pause.hide();
       $replay.show();
     });
@@ -311,7 +342,7 @@ $(window).scroll(function(){
               console.log(jqXHR);
               $("#modal-request-info-form input, #modal-request-info-form textarea").val("");
               //$("#modal-request-info-form input:checkbox").prop('checked', "");
-              $('.results-container').removeClass('show').addClass('hide');
+              $('#program-modal .container').removeClass('show').addClass('hide');
               $('.success-container').removeClass('hide').addClass('show');
 
           });
@@ -363,7 +394,7 @@ $(window).scroll(function(){
    $('.contact-modal-btn').click(function(){
      $('#program-modal').openModal();
      $('#program-modal .container').addClass('hide');
-     $('.results-container').removeClass('hide').addClass('show');
+     $('#program-modal .results-container').removeClass('hide').addClass('show');
 
    });
 
