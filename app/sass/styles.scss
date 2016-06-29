@@ -55,8 +55,17 @@ $black-87: rgba(0, 0, 0, .87);
 
 html {
   color: #fff;
+  -webkit-backface-visibility: hidden;
+  // -webkit-transform-style: preserve-3d;
+
 }
 
+
+.lean-overlay {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform:translateZ(0);
+}
 body {
   background-color: #fafafa;
   background-image: url(../img/fleur2.svg);
@@ -66,6 +75,8 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  -webkit-backface-visibility: hidden;
+  //-webkit-transform-style: preserve-3d;
 }
 
 @media only screen and (min-width: 601px) {
@@ -177,6 +188,8 @@ nav {
 main {
   flex: 1 0 auto;
   margin-top: -56px;
+//  -webkit-transform:translateZ(0);
+
   @media only screen and (min-width: 601px) {
     margin-top: -64px;
   }
@@ -236,6 +249,7 @@ main {
   //    background-attachment: fixed;
   //    background-position: center center;
   //    background-size: cover;
+  padding: 0px;
 
   .btn-large {
     font-size: 20px;
@@ -255,6 +269,7 @@ main {
     z-index: 1;
     overflow: hidden;
     left: -250px;
+    min-height: 100vh;
   }
 
   .valign.container {
@@ -312,11 +327,16 @@ main {
   @media only screen and (min-width: 601px) {
     background-image: url('../img/holy-door-1400w-min.jpg');
     // background-image: url('../img/holy-door-open.jpg');
-    background-attachment: fixed;
+
   }
 
   @media only screen and (max-height: 410px) {
     min-height: 200vh;
+  }
+
+  @media only screen and (min-width: 801px) {
+    background-attachment: fixed;
+    display: none;
   }
 
 }
