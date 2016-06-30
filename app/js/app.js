@@ -192,17 +192,17 @@ $(window).scroll(function(){
 
      //Question 1 (MA Theology)
      if ($('#question-1').prop('checked') === true) {
-       resultsTemplate = '<h5 class="program-name">MA Theology</h5>';
+       resultsTemplate = '<h5 class="program-name">MA Theology </h5>';
        count++;
      }
 
      //Question 2 (MA Catechetics & Evangelization)
      if ($('#question-2').prop('checked') === true) {
        if(resultsTemplate === "") {
-         resultsTemplate = '<h5 class="program-name">MA Catechetics & Evangelization</h5>';
+         resultsTemplate = '<h5 class="program-name">MA Catechetics and Evangelization </h5>';
          count++;
        } else {
-         resultsTemplate = resultsTemplate + '<h5 class="program-name">or MA Catechetics & Evangelization</h5>';
+         resultsTemplate = resultsTemplate + '<h5 class="program-name">or MA Catechetics and Evangelization </h5>';
          count++;
        }
      }
@@ -210,10 +210,10 @@ $(window).scroll(function(){
      //Question 3 (MA Theology: Catechetics Specialization)
      if ($('#question-3').prop('checked') === true) {
        if(resultsTemplate === "") {
-         resultsTemplate = '<h5 class="program-name">MA Theology: Catechetics Specialization</h5>';
+         resultsTemplate = '<h5 class="program-name">MA Theology: Catechetics Specialization </h5>';
          count++;
        } else {
-         resultsTemplate = resultsTemplate + '<h5 class="program-name">or MA Theology: Catechetics Specialization</h5>';
+         resultsTemplate = resultsTemplate + '<h5 class="program-name">or MA Theology: Catechetics Specialization </h5>';
          count++;
        }
      }
@@ -221,10 +221,10 @@ $(window).scroll(function(){
      //Question 4 (MA Theology: Canon Law First Cycle)
      if ($('#question-4').prop('checked') === true) {
        if(resultsTemplate === "") {
-         resultsTemplate = '<h5 class="program-name">MA Theology: Canon Law First Cycle</h5>';
+         resultsTemplate = '<h5 class="program-name">MA Theology: Canon Law First Cycle </h5>';
          count++;
        } else {
-         resultsTemplate = resultsTemplate + '<h5 class="program-name">or MA Theology: Canon Law First Cycle</h5>';
+         resultsTemplate = resultsTemplate + '<h5 class="program-name">or MA Theology: Canon Law First Cycle </h5>';
          count++;
        }
      }
@@ -232,14 +232,14 @@ $(window).scroll(function(){
      //Question 5 (MA Theology: Research Intensive Track)
      if ($('#question-5').prop('checked') === true) {
        if(resultsTemplate === "") {
-         resultsTemplate = '<h5 class="program-name">MA Theology: Research Intensive Track</h5>';
+         resultsTemplate = '<h5 class="program-name">MA Theology: Research Intensive Track </h5>';
 
        } else if(count === 4){
          // If all questions were checked
-         resultsTemplate = '<h5 class="program-name">any of our programs!</h5>';
+         resultsTemplate = '<h5 class="program-name">any of our programs! </h5>';
 
        } else {
-         resultsTemplate = resultsTemplate + '<h5 class="program-name">or MA Theology: Research Intensive Track</h5>';
+         resultsTemplate = resultsTemplate + '<h5 class="program-name">or MA Theology: Research Intensive Track </h5>';
        }
        count++;
      }
@@ -309,6 +309,9 @@ $(window).scroll(function(){
           //var serializedCheckboxData = '';
           var serializedData = '';
 
+          var program = $('.program-name').text() || "";
+          program = program.replace(/\s+/g, '-');
+
           // Serialize checkbox data
           // loop through checkboxes
           // for (i = 0; i < $formCheckboxes.length; i++) {
@@ -329,8 +332,8 @@ $(window).scroll(function(){
               serializedFormElements = serializedFormElements + $name + '=' + $val + '&';
             }
 
-          serializedData = serializedFormElements;  //Concat all form input serialized data
-
+          serializedData = serializedFormElements + 'program="' + program + '"';  //Concat all form input serialized data
+          console.log(serializedData);
           // Let's disable the inputs for the duration of the Ajax request.
           // Note: we disable elements AFTER the form data has been serialized.
           // Disabled form elements will not be serialized.
