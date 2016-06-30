@@ -1541,7 +1541,8 @@ main {
       margin-top: -64px; } }
 
 .section {
-  padding: 100px 0; }
+  padding: 100px 0;
+  -webkit-transform: translateZ(0); }
   @media screen and (max-height: 578px) {
     .section {
       padding: 25px 0; } }
@@ -1801,20 +1802,18 @@ main {
 .modal.bottom-sheet {
   max-height: 75%; }
 
-#program-modal .btn-large {
-  background-color: #21412a; }
-
-#program-modal #results-btn-row {
-  margin-bottom: 50px; }
-
-#program-modal .container.hide {
-  display: none; }
-
-#program-modal .container.show {
-  display: block; }
-
-#program-modal #submit-info {
-  margin-top: 16px; }
+#program-modal {
+  position: fixed !important; }
+  #program-modal .btn-large {
+    background-color: #21412a; }
+  #program-modal #results-btn-row {
+    margin-bottom: 50px; }
+  #program-modal .container.hide {
+    display: none; }
+  #program-modal .container.show {
+    display: block; }
+  #program-modal #submit-info {
+    margin-top: 16px; }
 
 .social-icons {
   margin-top: 32px; }
@@ -1840,6 +1839,15 @@ main {
 
 .call-mike a {
   color: #998643; }
+
+#contact {
+  background-color: #21412a;
+  border-top: 5px solid #998643;
+  padding: 25px 0 0 0; }
+  #contact .social-icons a i {
+    color: #fff; }
+  #contact .social-icons a path {
+    fill: #fff; }
 
 #apply-modal {
   background-image: url(../img/fleur2.svg);
@@ -1873,6 +1881,10 @@ footer.page-footer {
   footer.page-footer .row {
     margin-bottom: 0px;
     margin-top: 10px; }
+
+footer.is-ios {
+  border-top: none;
+  background-color: #998643; }
 
 .footer-copyright a {
   margin-right: 10px; }

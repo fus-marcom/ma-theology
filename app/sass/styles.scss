@@ -188,7 +188,7 @@ nav {
 main {
   flex: 1 0 auto;
   margin-top: -56px;
-//  -webkit-transform:translateZ(0);
+//-webkit-transform:translateZ(0);
 
   @media only screen and (min-width: 601px) {
     margin-top: -64px;
@@ -197,6 +197,7 @@ main {
 
 .section {
   padding: 100px 0;
+  -webkit-transform:translateZ(0);
   @media screen and (max-height: 578px) {
     padding: 25px 0;
   }
@@ -609,6 +610,8 @@ main {
 }
 
 #program-modal {
+  position: fixed !important;
+
   .btn-large {
     background-color: $primary-500;
   }
@@ -689,6 +692,33 @@ main {
   }
 }
 
+#contact {
+  background-color: $fus-green;
+  border-top: 5px solid $fus-gold;
+  padding: 25px 0 0 0;
+
+  .social-icons {
+
+    a {
+
+      i {
+          color: #fff;
+      }
+
+      path {
+        fill: #fff;
+      }
+    }
+
+
+  }
+
+  // input:-webkit-autofill {
+  //   background-color: transparent !important;
+  //   color: #fff !important;
+  // }
+}
+
 #apply-modal {
   background-image: url(../img/fleur2.svg);
   background-size: 20%;
@@ -745,6 +775,11 @@ footer.page-footer {
     margin-bottom: 0px;
     margin-top: 10px;
   }
+}
+
+footer.is-ios {
+  border-top: none;
+  background-color: $fus-gold;
 }
 
 .footer-copyright {
