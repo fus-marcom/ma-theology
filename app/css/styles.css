@@ -1578,12 +1578,15 @@ main {
     @media screen and (min-width: 800px) {
       #home #replay, #home #pause {
         display: block;
-        position: absolute;
+        position: fixed;
         bottom: 16px;
         right: 16px;
         cursor: pointer;
         opacity: .5;
         font-size: 48px; } }
+  @media screen and (min-width: 800px) {
+    #home #replay.scroll, #home #pause.scroll {
+      position: absolute; } }
 
 #home:before {
   content: "";

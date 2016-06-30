@@ -25,8 +25,6 @@ var $programSection =  $('#pick-your-program'),
 
 $(window).scroll(function(){
   scrollPos = $('body').scrollTop();
-  //console.log(programPos);
-  console.log(scrollPos);
 
   // TODO: find a way to make this transition smooth like on the devtips videos
   if (scrollPos > programPos - (programHeight/2)) {
@@ -37,9 +35,6 @@ $(window).scroll(function(){
   if (scrollPos > bannerPos - (programHeight/2) || scrollPos < programPos - (programHeight/2)) {
     $('#pop-up-banner').css('transform', 'translateY(100%)');
   }
-
-//console.log($('body').scrollTop());
-
 });
 
 $('#pop-up-banner').click(function(){
@@ -61,7 +56,6 @@ $(window).scroll(function(){
   }
 });
 
-  // TODO: add a pause button
   //Background hero video controls
   var $vid = $('#bgvid'),
       $replay = $('#replay'),
@@ -92,6 +86,20 @@ $(window).scroll(function(){
       $pause.hide();
       $replay.show();
     });
+
+    // Change position from fixed to absolute on scroll. Fix for ios device bug
+    var scrollFired = false;
+
+    $(window).scroll(function(){
+      if(scrollFired === false) {
+        $replay.addClass('scroll');
+        $pause.addClass('scroll');
+        scrollFired = true;
+      }
+    });
+
+
+
 
 
 

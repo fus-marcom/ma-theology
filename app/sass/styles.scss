@@ -291,13 +291,19 @@ main {
 
     @media screen and (min-width: 800px) {
       display: block;
-      position: absolute;
+      position: fixed;
       bottom: 16px;
       right: 16px;
       cursor: pointer;
       opacity: .5;
       font-size: 48px;
     }
+  }
+
+  #replay.scroll, #pause.scroll {
+    @media screen and (min-width: 800px) {
+      position: absolute;
+    }  
   }
 }
 
