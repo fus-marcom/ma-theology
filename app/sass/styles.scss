@@ -273,6 +273,10 @@ main {
     min-height: 100vh;
   }
 
+  .vid-shade {
+    background-color: rgba(0, 0, 0, 0.31);
+  }
+
   .valign.container {
     z-index: 2;
   }
@@ -304,7 +308,7 @@ main {
   #replay.scroll, #pause.scroll {
     @media screen and (min-width: 800px) {
       position: absolute;
-    }  
+    }
   }
 }
 

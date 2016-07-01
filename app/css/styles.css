@@ -1566,6 +1566,8 @@ main {
     overflow: hidden;
     left: -250px;
     min-height: 100vh; }
+  #home .vid-shade {
+    background-color: rgba(0, 0, 0, 0.31); }
   #home .valign.container {
     z-index: 2; }
   #home .flow-text {
