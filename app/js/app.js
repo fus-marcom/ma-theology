@@ -284,6 +284,9 @@ $(window).scroll(function(){
       // Bind to the submit event of our form
       $("#submit-info").click(function(event){
 
+        //Make sure the form is filled out before submitting
+        if ($('#name').val() !== "" && $('#email').val() !== "") {
+
           //Hidden checkbox to help prevent spam submissions
           checkLength = $('#checkbox-2:checked').length === 0;
 
@@ -310,7 +313,6 @@ $(window).scroll(function(){
           var serializedData = '';
 
           var program = $('.program-name').text() || "";
-          program = program.replace(/\s+/g, '-');
 
           // Serialize checkbox data
           // loop through checkboxes
@@ -332,7 +334,7 @@ $(window).scroll(function(){
               serializedFormElements = serializedFormElements + $name + '=' + $val + '&';
             }
 
-          serializedData = serializedFormElements + 'program="' + program + '"';  //Concat all form input serialized data
+          serializedData = serializedFormElements + 'program=' + program;  //Concat all form input serialized data
           console.log(serializedData);
           // Let's disable the inputs for the duration of the Ajax request.
           // Note: we disable elements AFTER the form data has been serialized.
@@ -391,6 +393,7 @@ $(window).scroll(function(){
         } else {
           $('#pgb-container label').css('color', 'red');
         }
+      }
       });
       //End Send to Google Sheet
 
