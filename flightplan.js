@@ -24,6 +24,6 @@ plan.local(function(local) {
 
 // run commands on remote hosts
 plan.remote(function(remote) {
-  remote.log('Move folder to web root');
-  remote.exec('cp -fRuv ~/www/dist/* ~/www/ma-theology/');
+  remote.log('Move folder to site root');
+  remote.exec('cp -fRuv ~/www/ma-theology/dist/* ~/www/ma-theology/');
 });
