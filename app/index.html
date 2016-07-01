@@ -8,6 +8,320 @@
   <link rel="shortcut icon" href="favicon.ico">
 <style>
 
+html {
+  color: #fff; }
+
+  nav {
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+  }
+
+  nav i,
+  nav [class^="mdi-"], nav [class*="mdi-"],
+  nav i.material-icons {
+    display: block;
+    font-size: 2rem;
+    height: 56px;
+    line-height: 56px;
+  }
+
+  nav .nav-wrapper {
+    position: relative;
+    height: 100%;
+  }
+
+  @media only screen and (min-width: 993px) {
+    nav a.button-collapse {
+      display: none;
+    }
+  }
+
+  nav .button-collapse {
+    float: left;
+    position: relative;
+    z-index: 1;
+    height: 56px;
+  }
+
+  nav .button-collapse i {
+    font-size: 2.7rem;
+    height: 56px;
+    line-height: 56px;
+  }
+
+  nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  @media only screen and (max-width: 992px) {
+    nav .brand-logo {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+    }
+  }
+
+  nav .brand-logo.right {
+    right: 0.5rem;
+    padding: 0;
+  }
+
+  nav ul {
+    margin: 0;
+  }
+
+  nav ul li {
+    transition: background-color .3s;
+    float: left;
+    padding: 0;
+  }
+
+  nav ul li.active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul a {
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    cursor: pointer;
+  }
+
+  nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul.left {
+    float: left;
+  }
+
+  .navbar-fixed {
+    position: relative;
+    height: 56px;
+    z-index: 998;
+  }
+
+  .navbar-fixed nav {
+    position: fixed;
+  }
+
+  @media only screen and (min-width: 601px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+      height: 64px;
+      line-height: 64px;
+    }
+    .navbar-fixed {
+      height: 64px;
+    }
+  }
+
+html {
+  color: #fff;
+  -webkit-backface-visibility: hidden; }
+  body {
+    background-color: #fafafa;
+    background-image: url(../img/fleur2.svg);
+    background-size: 20%;
+    background-attachment: fixed;
+    font-size: 16px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    -webkit-backface-visibility: hidden; }
+
+  @media only screen and (min-width: 601px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+      height: 76px;
+      line-height: 76px; } }
+
+  nav {
+    background-color: transparent;
+    box-shadow: none;
+    color: #fff;
+    padding: 0 10px;
+    transition: top 0.2s ease-in-out;
+    height: 64px;
+    line-height: 64px; }
+    @media only screen and (min-width: 601px) {
+      nav {
+        height: 76px;
+        line-height: 76px; } }
+    nav .button-collapse {
+      color: #fff; }
+      nav .button-collapse i {
+        line-height: 73px;
+        font-size: 3.5rem; }
+        @media only screen and (min-width: 601px) {
+          nav .button-collapse i {
+            line-height: 77px !important; } }
+    nav ul a {
+      color: #fff;
+      font-weight: 300; }
+    nav .brand-logo img {
+      height: 54px;
+      margin-top: 5px; }
+      @media only screen and (min-width: 601px) {
+        nav .brand-logo img {
+          height: 68px; } }
+    nav .apply-btn a {
+      border: 1px solid #fff;
+      line-height: 3;
+      transition: all 0.3s; }
+      nav .apply-btn a:hover {
+        background-color: #fff;
+        color: rgba(0, 0, 0, 0.87); }
+
+  .side-nav a {
+    font-weight: 300; }
+
+  .side-nav .logo {
+    height: 90px; }
+    .side-nav .logo a {
+      padding: 10px 10px 0px 10px; }
+      .side-nav .logo a:hover {
+        background-color: #fff; }
+    .side-nav .logo img {
+      width: 100%; }
+
+  .headroom {
+    will-change: transform;
+    transition: transform 200ms linear; }
+
+  .headroom--pinned {
+    transform: translateY(0%); }
+
+  .headroom--unpinned {
+    transform: translateY(-100%); }
+
+  main {
+    flex: 1 0 auto;
+    margin-top: -56px; }
+    @media only screen and (min-width: 601px) {
+      main {
+        margin-top: -64px; } }
+
+  .section {
+    padding: 100px 0;
+    -webkit-transform: translateZ(0); }
+    @media screen and (max-height: 578px) {
+      .section {
+        padding: 25px 0; } }
+
+  #home {
+    min-height: 100vh;
+    padding-top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0px; }
+    #home .btn-large {
+      font-size: 20px;
+      text-shadow: none;
+      min-width: 270px; }
+    @media screen and (max-height: 578px) {
+      #home {
+        padding-top: 76px; }
+        #home .container p.flow-text {
+          display: none; } }
+    #home .parallax {
+      z-index: 1;
+      overflow: hidden;
+      left: -250px;
+      min-height: 100vh; }
+    #home .vid-shade {
+      background-color: rgba(0, 0, 0, 0.31); }
+    #home .valign.container {
+      z-index: 2; }
+    #home .flow-text {
+      font-size: 120%;
+      line-height: 1.5; }
+    @media screen and (min-width: 800px) {
+      #home {
+        background: none; } }
+    #home #replay, #home #pause {
+      display: none; }
+      @media screen and (min-width: 800px) {
+        #home #replay, #home #pause {
+          display: block;
+          position: fixed;
+          bottom: 16px;
+          right: 16px;
+          cursor: pointer;
+          opacity: .5;
+          font-size: 48px; } }
+    @media screen and (min-width: 800px) {
+      #home #replay.scroll, #home #pause.scroll {
+        position: absolute; } }
+
+  #home:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-image: url("../img/holy-door-500w-min.jpg");
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    top: 0; }
+    @media only screen and (min-width: 501px) {
+      #home:before {
+        background-image: url("../img/holy-door-650w-min.jpg"); } }
+    @media only screen and (min-width: 601px) {
+      #home:before {
+        background-image: url("../img/holy-door-1400w-min.jpg"); } }
+    @media only screen and (max-height: 410px) {
+      #home:before {
+        min-height: 200vh; } }
+    @media only screen and (min-width: 801px) {
+      #home:before {
+        background-attachment: fixed;
+        display: none; } }
+
+  .short-screen {
+    display: none; }
+    @media screen and (max-height: 578px) {
+      .short-screen {
+        display: block; } }
+
+  #bgvid {
+    min-width: 100%;
+    min-height: 100%; }
+    @media screen and (max-width: 800px) {
+      #bgvid {
+        display: none; } }
+
+  .btn-inverse {
+    background-color: transparent;
+    border: solid 1px #fff;
+    color: #fff;
+    transition: all 0.3s; }
+    .btn-inverse:hover {
+      background-color: #fff;
+      color: rgba(0, 0, 0, 0.87); }
+
+      .valign-wrapper {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+
+      .valign-wrapper .valign {
+        display: block;
+      }
+
 
 </style>
 </head>
@@ -21,7 +335,6 @@
             <li><a class="color-modal-btn modal-trigger" href="#color-modal">Change Colors</a></li>
             <li><a class="slow-nav" href="#quote-banner">Why Franciscan?</a></li>
             <li><a class="slow-nav" href="#pick-your-program">Choose Your Program</a></li>
-            <!-- <li><a class="modal-trigger" href="#program-modal">Quiz</a></li> -->
             <li><a class="slow-nav" href="#testimonials">Accolades</a></li>
             <li><a class="contact-modal-btn">Contact</a></li>
             <li class="apply-btn">
@@ -32,7 +345,7 @@
       </nav>
     </div>
 
-  <ul class="side-nav" id="mobile-demo">
+  <ul class="side-nav" id="mobile-demo" style="transform:translateX(-100%);">
     <li class="logo">
       <a id="logo-container" href="home" class="slow-nav brand-logo">
         <img src="img/side-nav-logo.jpg">
@@ -41,7 +354,6 @@
     <li><a class="color-modal-btn modal-trigger" href="#color-modal">Change Colors</a></li>
     <li><a class="slow-nav" href="#quote-banner">Why Franciscan?</a></li>
     <li><a class="slow-nav" href="#pick-your-program">Choose Your Program</a></li>
-    <!-- <li><a class="modal-trigger" href="#program-modal">Quiz</a></li> -->
     <li><a class="slow-nav" href="#testimonials">Accolades</a></li>
     <li><a class="contact-modal-btn">Contact</a></li>
     <li>
@@ -53,15 +365,14 @@
     <!-- Home Section -->
     <div class="section valign-wrapper txt-shadow z-depth-1" id="home" name="#home">
       <div class="parallax">
-        <video autoplay poster="img/hero-placeholder.png" id="bgvid">
+        <video autoplay poster="img/hero-placeholder-op.jpg" id="bgvid">
           <source src="video/ma-theology-720p.mp4" type="video/mp4">
         </video>
-        <i class="material-icons" id="replay">play_arrow</i>
-        <i class="material-icons" id="pause">pause</i>
         <!-- <a href="#why-franciscan" class="slow-nav"><i class="large icon-chevron-down" id="down-icon"></i></a> -->
       </div>
       <div class="parallax vid-shade">
-
+        <i class="material-icons" id="replay">play_arrow</i>
+        <i class="material-icons" id="pause">pause</i>
       </div>
       <div class="valign container">
         <div class="row">
