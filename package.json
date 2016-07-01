@@ -1,7 +1,7 @@
 {
-  "name": "franciscan.university",
+  "name": "ma-theology",
   "version": "1.0.0",
-  "description": "A mobile first, material design inspired, one page site for prospective students.",
+  "description": "A mobile first, material design inspired, one page site for prospective theology students.",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
