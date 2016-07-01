@@ -94,6 +94,10 @@ $(window).scroll(function(){
       $replay = $('#replay'),
       $pause = $('#pause');
 
+  if ($(window).width() > 800) {
+    $vid[0].play();
+  }
+
   $pause.hide();
 
   $vid.on('playing',function(){

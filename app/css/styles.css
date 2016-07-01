@@ -638,14 +638,14 @@ footer.page-footer {
     .collection .collection-item:last-child {
       border-bottom: none; }
     .collection .collection-item.active {
-      background-color: #ffc658;
-      color: white; }
+      background-color: #998643;
+      color: #fcfbf8; }
       .collection .collection-item.active .secondary-content {
         color: #fff; }
   .collection a.collection-item {
     display: block;
     transition: .25s;
-    color: #ffc658; }
+    color: #998643; }
     .collection a.collection-item:not(.active):hover {
       background-color: #ddd; }
   .collection.with-header .collection-header {
@@ -659,7 +659,7 @@ footer.page-footer {
 
 .secondary-content {
   float: right;
-  color: #ffc658; }
+  color: #998643; }
 
 .collapsible .collection {
   margin: 0;
@@ -779,8 +779,8 @@ form p:last-child {
   height: 22px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-right: 2px solid #ffc658;
-  border-bottom: 2px solid #ffc658;
+  border-right: 2px solid #998643;
+  border-bottom: 2px solid #998643;
   transform: rotate(40deg);
   backface-visibility: hidden;
   transform-origin: 100% 100%; }
@@ -797,7 +797,7 @@ form p:last-child {
   height: 22px;
   border-top: none;
   border-left: none;
-  border-right: 2px solid #ffc658;
+  border-right: 2px solid #998643;
   border-bottom: none;
   transform: rotate(90deg);
   backface-visibility: hidden;
@@ -856,8 +856,8 @@ form p:last-child {
   top: 0;
   width: 20px;
   height: 20px;
-  border: 2px solid #ffc658;
-  background-color: #ffc658;
+  border: 2px solid #998643;
+  background-color: #998643;
   z-index: 0; }
 
 [type="checkbox"].filled-in.tabbed:focus + label:after {
@@ -867,8 +867,8 @@ form p:last-child {
 
 [type="checkbox"].filled-in.tabbed:checked:focus + label:after {
   border-radius: 2px;
-  background-color: #ffc658;
-  border-color: #ffc658; }
+  background-color: #998643;
+  border-color: #998643; }
 
 [type="checkbox"].filled-in:disabled:not(:checked) + label:before {
   background-color: transparent;
@@ -886,11 +886,11 @@ form p:last-child {
   border-color: #BDBDBD; }
 
 select:focus {
-  outline: 1px solid white; }
+  outline: 1px solid #f0ebdc; }
 
 button:focus {
   outline: none;
-  background-color: #ffcd6c; }
+  background-color: #a79249; }
 
 label {
   font-size: 0.8rem;
@@ -1007,8 +1007,8 @@ textarea.materialize-textarea {
   input[type=number]:focus:not([readonly]),
   input[type=search]:focus:not([readonly]),
   textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #ffc658;
-    box-shadow: 0 1px 0 0 #ffc658; }
+    border-bottom: 1px solid #998643;
+    box-shadow: 0 1px 0 0 #998643; }
   input:not([type]):focus:not([readonly]) + label,
   input[type=text]:focus:not([readonly]) + label,
   input[type=password]:focus:not([readonly]) + label,
@@ -1022,7 +1022,7 @@ textarea.materialize-textarea {
   input[type=number]:focus:not([readonly]) + label,
   input[type=search]:focus:not([readonly]) + label,
   textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: #ffc658; }
+    color: #998643; }
   input:not([type]).valid, input:not([type]):focus.valid,
   input[type=text].valid,
   input[type=text]:focus.valid,
@@ -1190,7 +1190,7 @@ textarea.materialize-textarea {
     font-size: 2rem;
     transition: color .2s; }
     .input-field .prefix.active {
-      color: #ffc658; }
+      color: #998643; }
   .input-field .prefix ~ input,
   .input-field .prefix ~ textarea {
     margin-left: 3rem;
@@ -1326,8 +1326,8 @@ form p:last-child {
   height: 22px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-right: 2px solid #ffc658;
-  border-bottom: 2px solid #ffc658;
+  border-right: 2px solid #998643;
+  border-bottom: 2px solid #998643;
   transform: rotate(40deg);
   backface-visibility: hidden;
   transform-origin: 100% 100%; }
@@ -1344,7 +1344,7 @@ form p:last-child {
   height: 22px;
   border-top: none;
   border-left: none;
-  border-right: 2px solid #ffc658;
+  border-right: 2px solid #998643;
   border-bottom: none;
   transform: rotate(90deg);
   backface-visibility: hidden;
@@ -1403,8 +1403,8 @@ form p:last-child {
   top: 0;
   width: 20px;
   height: 20px;
-  border: 2px solid #ffc658;
-  background-color: #ffc658;
+  border: 2px solid #998643;
+  background-color: #998643;
   z-index: 0; }
 
 [type="checkbox"].filled-in.tabbed:focus + label:after {
@@ -1414,8 +1414,8 @@ form p:last-child {
 
 [type="checkbox"].filled-in.tabbed:checked:focus + label:after {
   border-radius: 2px;
-  background-color: #ffc658;
-  border-color: #ffc658; }
+  background-color: #998643;
+  border-color: #998643; }
 
 [type="checkbox"].filled-in:disabled:not(:checked) + label:before {
   background-color: transparent;
@@ -1590,34 +1590,6 @@ main {
   @media screen and (min-width: 800px) {
     #home #replay.scroll, #home #pause.scroll {
       position: absolute; } }
-
-#home:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  display: block;
-  background-image: url("../img/holy-door-500w-min.jpg");
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  min-height: 100vh;
-  top: 0; }
-  @media only screen and (min-width: 501px) {
-    #home:before {
-      background-image: url("../img/holy-door-650w-min.jpg"); } }
-  @media only screen and (min-width: 601px) {
-    #home:before {
-      background-image: url("../img/holy-door-1400w-min.jpg"); } }
-  @media only screen and (max-height: 410px) {
-    #home:before {
-      min-height: 200vh; } }
-  @media only screen and (min-width: 801px) {
-    #home:before {
-      background-attachment: fixed;
-      display: none; } }
 
 .short-screen {
   display: none; }

@@ -9,7 +9,9 @@
 <style>
 
 html {
-  color: #fff; }
+  color: #fff;
+  margin: 0;
+  padding: 0;}
 
   nav {
     width: 100%;
@@ -123,9 +125,39 @@ html {
     }
   }
 
+  .left {
+    float: left !important; }
+
+  .right {
+    float: right !important; }
+
+  .side-nav {
+    position: fixed;
+    width: 240px;
+    left: 0;
+    top: 0;
+    margin: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    height: 100%;
+    height: calc(100% + 60px);
+    height: -moz-calc(100%);
+    padding-bottom: 60px;
+    background-color: #fff;
+    z-index: 999;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    overflow-y: auto;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: translateX(-105%);
+            transform: translateX(-105%);
+  }
+
 html {
   color: #fff;
-  -webkit-backface-visibility: hidden; }
+  -webkit-backface-visibility: hidden;}
   body {
     background-color: #fafafa;
     background-image: url(../img/fleur2.svg);
@@ -135,7 +167,9 @@ html {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    -webkit-backface-visibility: hidden; }
+    -webkit-backface-visibility: hidden;
+    margin: 0;
+    padding: 0;}
 
   @media only screen and (min-width: 601px) {
     nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
@@ -208,12 +242,217 @@ html {
       main {
         margin-top: -64px; } }
 
+
+        .container {
+          margin: 0 auto;
+          max-width: 1280px;
+          width: 90%;
+        }
+
+        @media only screen and (min-width: 601px) {
+          .container {
+            width: 85%;
+          }
+        }
+
+        @media only screen and (min-width: 993px) {
+          .container {
+            width: 70%;
+          }
+        }
+
+        .container .row {
+          margin-left: -0.75rem;
+          margin-right: -0.75rem;
+        }
+
   .section {
     padding: 100px 0;
     -webkit-transform: translateZ(0); }
     @media screen and (max-height: 578px) {
       .section {
         padding: 25px 0; } }
+
+        .row {
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 20px;
+        }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        .row .col {
+          float: left;
+          box-sizing: border-box;
+          padding: 0 0.75rem;
+        }
+
+        .row .col[class*="push-"], .row .col[class*="pull-"] {
+          position: relative;
+        }
+
+        .flow-text {
+          font-weight: 300;
+        }
+
+        @media only screen and (min-width: 360px) {
+          .flow-text {
+            font-size: 1.2rem;
+          }
+        }
+
+        @media only screen and (min-width: 390px) {
+          .flow-text {
+            font-size: 1.224rem;
+          }
+        }
+
+        @media only screen and (min-width: 420px) {
+          .flow-text {
+            font-size: 1.248rem;
+          }
+        }
+
+        @media only screen and (min-width: 450px) {
+          .flow-text {
+            font-size: 1.272rem;
+          }
+        }
+
+        @media only screen and (min-width: 480px) {
+          .flow-text {
+            font-size: 1.296rem;
+          }
+        }
+
+        @media only screen and (min-width: 510px) {
+          .flow-text {
+            font-size: 1.32rem;
+          }
+        }
+
+        @media only screen and (min-width: 540px) {
+          .flow-text {
+            font-size: 1.344rem;
+          }
+        }
+
+        @media only screen and (min-width: 570px) {
+          .flow-text {
+            font-size: 1.368rem;
+          }
+        }
+
+        @media only screen and (min-width: 600px) {
+          .flow-text {
+            font-size: 1.392rem;
+          }
+        }
+
+        @media only screen and (min-width: 630px) {
+          .flow-text {
+            font-size: 1.416rem;
+          }
+        }
+
+        @media only screen and (min-width: 660px) {
+          .flow-text {
+            font-size: 1.44rem;
+          }
+        }
+
+        @media only screen and (min-width: 690px) {
+          .flow-text {
+            font-size: 1.464rem;
+          }
+        }
+
+        @media only screen and (min-width: 720px) {
+          .flow-text {
+            font-size: 1.488rem;
+          }
+        }
+
+        @media only screen and (min-width: 750px) {
+          .flow-text {
+            font-size: 1.512rem;
+          }
+        }
+
+        @media only screen and (min-width: 780px) {
+          .flow-text {
+            font-size: 1.536rem;
+          }
+        }
+
+        @media only screen and (min-width: 810px) {
+          .flow-text {
+            font-size: 1.56rem;
+          }
+        }
+
+        @media only screen and (min-width: 840px) {
+          .flow-text {
+            font-size: 1.584rem;
+          }
+        }
+
+        @media only screen and (min-width: 870px) {
+          .flow-text {
+            font-size: 1.608rem;
+          }
+        }
+
+        @media only screen and (min-width: 900px) {
+          .flow-text {
+            font-size: 1.632rem;
+          }
+        }
+
+        @media only screen and (min-width: 930px) {
+          .flow-text {
+            font-size: 1.656rem;
+          }
+        }
+
+        @media only screen and (min-width: 960px) {
+          .flow-text {
+            font-size: 1.68rem;
+          }
+        }
+
+        @media only screen and (max-width: 360px) {
+          .flow-text {
+            font-size: 1.2rem;
+          }
+        }
+
+        .center, .center-align {
+          text-align: center; }
+
+          h1, h2, h3, h4, h5, h6 {
+            font-weight: 400;
+            line-height: 1.1;
+          }
+          h3 {
+            font-size: 2.92rem;
+            line-height: 110%;
+            margin: 1.46rem 0 1.168rem 0;
+          }
+
+          h5 {
+            font-size: 1.64rem;
+            line-height: 110%;
+            margin: 0.82rem 0 0.656rem 0;
+          }
+      .btn-large {
+      height: 54px;
+      line-height: 54px;
+    }
 
   #home {
     min-height: 100vh;
@@ -233,6 +472,10 @@ html {
       z-index: 1;
       overflow: hidden;
       left: -250px;
+      top: 0;
+      right: 0;
+      left: 0;
+      position: absolute;
       min-height: 100vh; }
     #home .vid-shade {
       background-color: rgba(0, 0, 0, 0.31); }
@@ -266,26 +509,33 @@ html {
     right: 0;
     z-index: -1;
     display: block;
-    background-image: url("../img/holy-door-500w-min.jpg");
     background-attachment: scroll;
     background-position: center;
     background-size: cover;
     width: 100%;
     min-height: 100vh;
     top: 0; }
-    @media only screen and (min-width: 501px) {
+
+    @media only screen and (min-width: 801px) {
+      #home:before {
+        background-attachment: fixed;
+        display: none; } }
+
+    @media only screen and (max-width: 500px) {
+      #home:before {
+        background-image: url("../img/holy-door-500w-min.jpg");
+      }
+    }
+    @media only screen and (min-width: 501px) and (max-width: 600px) {
       #home:before {
         background-image: url("../img/holy-door-650w-min.jpg"); } }
-    @media only screen and (min-width: 601px) {
+    @media only screen and (min-width: 601px) and (max-width: 800px) {
       #home:before {
         background-image: url("../img/holy-door-1400w-min.jpg"); } }
     @media only screen and (max-height: 410px) {
       #home:before {
         min-height: 200vh; } }
-    @media only screen and (min-width: 801px) {
-      #home:before {
-        background-attachment: fixed;
-        display: none; } }
+
 
   .short-screen {
     display: none; }
@@ -295,10 +545,11 @@ html {
 
   #bgvid {
     min-width: 100%;
-    min-height: 100%; }
-    @media screen and (max-width: 800px) {
+    min-height: 100%;
+    display: none;}
+    @media screen and (min-width: 801px) {
       #bgvid {
-        display: none; } }
+        display: inline-block; } }
 
   .btn-inverse {
     background-color: transparent;
@@ -365,7 +616,7 @@ html {
     <!-- Home Section -->
     <div class="section valign-wrapper txt-shadow z-depth-1" id="home" name="#home">
       <div class="parallax">
-        <video autoplay poster="img/hero-placeholder-op.jpg" id="bgvid">
+        <video poster="img/hero-placeholder-min.jpg" id="bgvid" preload="none">
           <source src="video/ma-theology-720p.mp4" type="video/mp4">
         </video>
         <!-- <a href="#why-franciscan" class="slow-nav"><i class="large icon-chevron-down" id="down-icon"></i></a> -->
