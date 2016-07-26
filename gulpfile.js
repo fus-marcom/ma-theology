@@ -35,7 +35,7 @@ gulp.task('dist', function() {
               removeAttributeQuotes: true,
               removeComments: true,
               removeEmptyAttributes: true,
-              removeOptionalTags: true,
+              //removeOptionalTags: true,
               removeRedundantAttributes: true,
               removeScriptTypeAttributes: true,
               removeStyleLinkTypeAttributes: true,
