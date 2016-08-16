@@ -1567,7 +1567,8 @@ main {
     left: -250px;
     min-height: 100vh; }
   #home .vid-shade {
-    background-color: rgba(0, 0, 0, 0.31); }
+    background-color: rgba(0, 0, 0, 0.31);
+    left: 0; }
   #home .valign.container {
     z-index: 2; }
   #home .flow-text {
@@ -1590,6 +1591,20 @@ main {
   @media screen and (min-width: 800px) {
     #home #replay.scroll, #home #pause.scroll {
       position: absolute; } }
+
+#home:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  top: 0; }
 
 .short-screen {
   display: none; }
