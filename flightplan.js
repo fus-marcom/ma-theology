@@ -26,4 +26,5 @@ plan.local(function(local) {
 plan.remote(function(remote) {
   remote.log('Move folder to site root');
   remote.exec('cp -fRu ~/www/dist/* ~/www/ma-theology/');
+  remote.exec('rm -rf ~/www/dist/*');
 });
