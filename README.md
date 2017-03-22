@@ -1,13 +1,9 @@
-# franciscan.university
-A material design inspired, mobile-first, one-page website for Franciscan University of Steubenville geared toward prospective students.
-Live site: https://franciscan.university
+# MA Theology One Page Site
+A material design inspired, mobile-first, one-page website for Franciscan University of Steubenville geared toward prospective MA Theology students.
+Live site: https://franciscan.university/ma-theology
 
 TODO:
-- Convert .sass to .scss
-- Improve site load times (especially on mobile)
 - Customize materialize.js by removing unused code
-- Customize materialize.css by removing unused styles
-- Improve desktop design
 - Add subtle(!) scroll animation to some elements on the page
 - Refactor app.js to be as efficient as possible
 
