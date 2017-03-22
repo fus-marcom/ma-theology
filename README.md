@@ -11,4 +11,4 @@ TODO:
 - Add subtle(!) scroll animation to some elements on the page
 - Refactor app.js to be as efficient as possible
 
-Please submit all pull requests on seperate branches. PR's that change a lot of things at once are less likely to be merged.
+Please submit all pull requests on separate branches. PR's that change a lot of things at once are less likely to be merged.
