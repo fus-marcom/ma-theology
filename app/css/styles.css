@@ -1498,11 +1498,21 @@ nav {
     color: #fff;
     font-weight: 300; }
   nav .brand-logo img {
-    height: 54px;
-    margin-top: 5px; }
+    height: 48px;
+    margin-top: 8px; }
     @media only screen and (min-width: 601px) {
       nav .brand-logo img {
-        height: 68px; } }
+        height: 48px; } }
+    @media only screen and (max-width: 520px) {
+      nav .brand-logo img {
+        display: none; }
+        nav .brand-logo img .small-screen-logo {
+          display: block; } }
+  nav .brand-logo .small-screen-logo {
+    display: none; }
+    @media only screen and (max-width: 520px) {
+      nav .brand-logo .small-screen-logo {
+        display: block; } }
   nav .apply-btn a {
     border: 1px solid #fff;
     line-height: 3;
@@ -1521,7 +1531,7 @@ nav {
     .side-nav .logo a:hover {
       background-color: #fff; }
   .side-nav .logo img {
-    width: 100%; }
+    width: 90%; }
 
 .headroom {
   will-change: transform;
