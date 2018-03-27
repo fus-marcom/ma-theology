@@ -1598,6 +1598,11 @@ main {
         cursor: pointer;
         opacity: .5;
         font-size: 48px; } }
+  #home .vid-btns {
+    display: none; }
+    @media screen and (min-width: 800px) {
+      #home .vid-btns {
+        display: block; } }
   @media screen and (min-width: 800px) {
     #home #replay.scroll, #home #pause.scroll {
       position: absolute; } }

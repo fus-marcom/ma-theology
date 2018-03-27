@@ -573,7 +573,8 @@
     }
 
     #home #replay,
-    #home #pause {
+    #home #pause,
+    .vid-btns {
       display: none;
     }
 
@@ -587,6 +588,10 @@
         cursor: pointer;
         opacity: .5;
         font-size: 48px;
+      }
+
+      .vid-btns {
+        display: block;
       }
     }
 
@@ -761,8 +766,11 @@
         <!-- <a href="#why-franciscan" class="slow-nav"><i class="large icon-chevron-down" id="down-icon"></i></a> -->
       </div>
       <div class="parallax vid-shade">
-        <i class="material-icons" id="replay">play_arrow</i>
-        <i class="material-icons" id="pause">pause</i>
+        <div class="vid-btns">
+          <i class="material-icons" id="replay">play_arrow</i>
+          <i class="material-icons" id="pause">pause</i>
+        </div>
+
       </div>
       <div class="valign container">
         <div class="row">

@@ -322,6 +322,14 @@ main {
     }
   }
 
+  .vid-btns {
+    display: none;
+
+    @media screen and (min-width: 800px) {
+      display: block;
+    }
+  }
+
   #replay.scroll, #pause.scroll {
     @media screen and (min-width: 800px) {
       position: absolute;
